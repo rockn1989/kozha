@@ -1,0 +1,114 @@
+/*______ FORMS ______*/
+
+.main-search {
+	position: absolute;
+	right: 0;
+	width: 20%;
+	overflow: hidden;
+	transition: width .3s ease-in-out;
+	@media @desk-w {
+		width: 5%;
+		input {
+			opacity: 0;
+		}
+		&.open {
+			width: 100%;
+			input {
+				opacity: 1;
+			}
+		}
+	}
+	@media (min-width: 1300px) {
+		width: 20%;
+		input {
+			opacity: 1;
+		}
+	}
+	form {
+		position: relative;
+		width: 100%;
+		height: 48px;
+		background-color: #ffffff;
+		input[type="text"] {
+			margin-left: 15px;
+			border: none;
+			outline: none;
+		}
+		button {
+			display: none;
+			background-color: transparent;
+			cursor: pointer;
+			border: none;
+			color: @red;
+			font-size: 14px;
+			text-transform: uppercase;
+			letter-spacing: 1.23px;
+			opacity: 0;
+			transition: opacity 1.3s ease;
+		}
+		i {
+			padding-left: 5px;
+			&:before {
+				transition: color .3s ease;
+			}
+		}
+	}
+	::placeholder {
+		color: @red;f
+		z-index: 12px;
+		transition: color .3s ease;
+	}
+	&:hover {
+		cursor: pointer;
+		i:before,::placeholder {
+			color: #c4393d;
+		}
+	}
+	&.open {
+		width: 100%;
+		input[type="text"] {
+			width: 75%;
+		}
+		button {
+			display: inline-block;
+			opacity: 1;
+		}
+	}
+}
+
+
+.mobile-form {
+	position: relative;
+	margin-top: 10px;
+	margin-bottom: 30px;
+	width: 100%;
+	display: none;
+	input[type="text"] {
+		padding-right: 45px;
+		padding-left: 5%;
+		width: 100%;
+		height: 40px;
+		line-height: 38px;
+		border: 1px solid @red;
+		@media @tablet-w {
+			padding-left: 3%;
+		}
+	}
+	.mobile-button {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 40px;
+		height: 40px;
+		line-height: 40px;
+		border: none;
+		background: transparent;
+		&:after {
+			content: "\e911";
+			font-size: 20px;
+			display: inherit;
+			color: @red;
+			.icomoon();
+		}
+	}
+}

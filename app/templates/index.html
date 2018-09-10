@@ -1,0 +1,235 @@
+{% extends "layouts/default.html" %}
+{% set title="Главная" %}
+{% set products =[
+	{name: "Куртка женская", stocks: {new:"Новинка"}, brand: "Gucci", price: "7 990р.", oldprice: ""},
+	{name: "Жилет из соболя с отделкой из свакары по бокам", stocks: {discount:"-20%"}, brand: "Avanti", price: "731 493 р.", oldprice: "965 493 р. "},
+	{name: "Норковая Шуба", brand: "Елена Фурс", price: "124 990 р.", oldprice: ""},
+	{name: "Куртка женская", brand: "Gucci", price: "7 990р.", oldprice: ""} 
+] %}
+{% block content %}
+	<!-- begin main-slider -->
+	<div class="main-slider preload">
+		<div class="uk-container">
+			<div class="slider">
+				<div class="slide"><a href=""><img src="img/sliders/main-slider-1-1365x622.png" alt=""></a></div>
+				<div class="slide"><a href=""><img data-lazy="img/sliders/main-slider-1-1365x622-2.png" alt=""></a></div>
+				<div class="slide"><a href=""><img data-lazy="img/sliders/main-slider-1-1365x622-3.png" alt=""></a></div>
+				<div class="slide"><a href=""><img data-lazy="img/sliders/main-slider-1-1365x622-4.png" alt=""></a></div>
+				<div class="slide"><a href=""><img data-lazy="img/sliders/main-slider-1-1365x622-5.png" alt=""></a></div>
+			</div>
+			<div class="slider__arrows">
+				<div class="slide-prev"><i class="icon-arrow-left"></i></div>
+				<div class="slide-next"><i class="icon-arrow-right"></i></div>
+			</div>
+		</div>
+	</div>
+	<!-- end  main-slider -->
+
+	<!-- begin products -->
+	<div class="products">
+		<div class="uk-container">
+			<div class="products__inner">
+				<div class="uk-grid uk-grid-collapse">
+					<div class="uk-width-1-1 uk-width-large-1-3 uk-width-xlarge-1-4">
+						<div class="promo-card">
+							<div class="promo-card__inner">
+								<div class="promo-card__img">
+									<img src="img/promo-logo.png" alt="">
+								</div>
+								<div class="promo-card__text">
+									Скидка 5% клиентам интернета магазина
+								</div>
+								<div class="promo-card__btn">
+									<a href="" class="btn">Подробнее</a>
+								</div>
+								<div class="promo-card__subtitle">
+									Срок акции уточняйте у консультантов
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="uk-width-1-1 uk-width-large-2-3 uk-width-xlarge-3-4">
+						<div class="main-products-slider uk-invisible" data-uk-scrollspy="{cls:'uk-animation-up uk-invisible'}">
+							<div class="slider">
+								{% for product in products %} 
+								<div class="slide">
+									<div class="card">
+										<div class="card__inner">
+											<div class="card__top">
+												<div class="card__img">
+													<a href=""><img src="img/sliders/card-img-{{loop.index}}-314x471.png" alt=""></a>
+													<div class="card-action-wrapper">
+														<div class="card-favorite">
+															<a href="" class="icon-favorite js__check-favorite"></a>
+														</div>
+														<ul class="card-colors-list">
+															<li><a href="#" class="color" style="background-color: #833b3a;"></a></li>
+															<li><a href="#" class="color" style="background-color: #3d3b41;"></a></li>
+															<li><a href="#" class="color" style="background-color: #d8d8d8;"></a></li>
+														</ul>
+													</div>
+													<div class="stocks">
+														{% if product.stocks.new is not empty %}
+															<div class="stocks__new">{{product.stocks.new}}</div>
+														{% endif %}
+														{% if product.stocks.discount is not empty %}
+															<div class="stocks__discount">{{product.stocks.discount}}</div>
+														{% endif %}
+													</div>
+													<div class="card-sizes-wrapper">
+														<ul class="sizes-list">
+															<li><a href="#">36/170</a></li>
+															<li><a href="#">36/170</a></li>
+															<li><a href="#">36/170</a></li>
+															<li><a href="#">36/170</a></li>
+														</ul>
+													</div>
+													<div class="card-preview">
+														<a class="preview">Быстрый просмотр</a>
+													</div>
+												</div>
+											</div>
+											<div class="card__middle">
+												<div class="card__product-name"><a href="">{{product.name}}</a></div>
+												<div class="card__product-price">
+													<div class="current-price">{{product.price}}</div>
+													<div class="old-price">{{product.oldprice}}</div>
+												</div>
+											</div>
+											<div class="card__bottom">
+												<div class="card__product-brand"><a href="">{{product.brand}}</a></div>
+												<div class="card__offer">
+													<a href="">
+														<span class="card__offer-text">В рассрочку</span> от <span class="card__offer-value">491 р.</span>
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								{% endfor %}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end products -->
+
+	<!-- begin products-style -->
+	<div class="products-style uk-invisible" data-uk-scrollspy="{cls:'uk-animation-up uk-invisible'}">
+		<div class="uk-container">
+			<div class="title-h2">Выберите свой стиль</div>
+			<div class="uk-grid">
+				<div class="uk-width-1-1 uk-width-medium-1-1 uk-width-xlarge-3-4">
+					<div class="products-style-list">
+						<div class="item">
+							<a href="">
+								<img data-src="img/product-style-1-315x315.png" class="lazy" alt="">
+								<span class="title">Мужчинам</span>
+							</a>
+						</div>
+						<div class="item">
+							<a href="">
+								<img data-src="img/product-style-2-315x315.png" class="lazy" alt="">
+								<span class="title">Женщинам</span>
+							</a>
+						</div>
+						<div class="item">
+							<a href="">
+								<img data-src="img/product-style-3-315x315.png" class="lazy" alt="">
+								<span class="title">Меха</span>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="uk-width-1-1 uk-width-medium-1-1 uk-width-xlarge-1-4">
+					<div class="promo-card promo-card--small">
+						<div class="promo-card__inner">
+							<div class="promo-card__img">
+								<img src="img/promo-logo.png" alt="">
+							</div>
+							<div class="promo-card__text">
+								Скидка 5% клиентам интернета магазина
+							</div>
+							<div class="promo-card__btn">
+								<a href="" class="btn">Подробнее</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end products-style -->
+
+	<!-- begin brands-slider -->
+	<div class="brands-slider">
+		<div class="uk-container">
+			<div class="slider">
+				<div class="slide"><a href="#"><img src="img/sliders/brands-1.png" alt=""></a></div>
+				<div class="slide"><a href="#"><img src="img/sliders/brands-2.png" alt=""></a></div>
+				<div class="slide"><a href="#"><img src="img/sliders/brands-3.png" alt=""></a></div>
+				<div class="slide"><a href="#"><img src="img/sliders/brands-4.png" alt=""></a></div>
+				<div class="slide"><a href="#"><img src="img/sliders/brands-5.png" alt=""></a></div>
+				<div class="slide"><a href="#"><img src="img/sliders/brands-6.png" alt=""></a></div>
+				<div class="slide"><a href="#"><img src="img/sliders/brands-3.png" alt=""></a></div>
+			</div>
+		</div>
+	</div>
+	<!-- end brands-slider -->
+
+	<!-- begin main-page-news -->
+	<div class="main-page-news uk-invisible" data-uk-scrollspy="{cls:'uk-animation-up uk-invisible'}">
+		<div class="uk-container">
+			<div class="news-wrapper">
+				<div class="title-h2 line-bottom">Новости и акции</div>
+				<a href="" class="show-all">Смотреть все</a>
+				<div class="news__inner">
+					<div class="news-preview">
+						<div class="news-preview__img">
+							<a href="">
+								<img data-src="img/news-preview-img-1-315x210.png" class="lazy" alt="">
+							</a>
+						</div>
+						<div class="news-preview__text">
+							<a href="">Скидка 5% всем клиентам интернет магазина</a>
+						</div>
+						<div class="news-preview__date">
+							<time datetime="2018-05-24">24 мая 2018</time>
+						</div>
+					</div>
+					<div class="news-preview">
+						<div class="news-preview__img">
+							<a href="">
+								<img data-src="img/news-preview-img-2-315x210.png" class="lazy" alt="">
+							</a>
+						</div>
+						<div class="news-preview__text">
+							<a href=""> 23 по 26 февраля 2017г. предоставляется дополнительная скидка 10%</a>
+						</div>
+						<div class="news-preview__date">
+							<time datetime="2018-03-12">12 марта 2018</time>
+						</div>
+					</div>
+					<div class="news-preview">
+						<div class="news-preview__img">
+							<a href="">
+								<img data-src="img/news-preview-img-3-315x210.png" class="lazy" alt="">
+							</a>
+						</div>
+						<div class="news-preview__text">
+							<a href="">Ко Дню рождения покупателя – скидка 5% на весь товар без скидки</a>
+						</div>
+						<div class="news-preview__date">
+							<time datetime="2018-06-14">14 июня 2018</time>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end main-page-news -->
+
+{% endblock %}

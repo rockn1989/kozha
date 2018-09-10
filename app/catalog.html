@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Каталог</title>
+	<meta property="og:url" content="">
+	<meta property="og:type" content="Article">
+	<meta property="og:site_name" content="">
+	<meta property="og:image" content="">
+	<meta property="og:title" content="">
+	<meta property="og:description" content="">
+	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+	<link rel="stylesheet" href="libs/css/uikit.min.css">
+	<link rel="stylesheet" href="libs/slick/slick.css">
+	<link rel="stylesheet" href="libs/slick/slick-theme.css">
+	<link rel="stylesheet" href="libs/mCustomScrollbar/jquery.mCustomScrollbar.min.css">
+	<link rel="stylesheet" href="libs/select2/select2.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<!--[if lte IE 9]>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+		<script src="libs/html5shiv.min.js"></script>
+		<script src="libs/placeholders.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+<!-- begin header -->
+<header class="header">
+	<div class="uk-container">
+		<div id="header-desc" class="header-desc uk-visible-large">
+
+			<div class="header-desc__top">
+				<div class="uk-grid">
+					<div class="uk-width-1-2">
+						<div class="stores">
+							<div class="stores__geo">
+								<a href="#" class="geo-name js__geo-name-toggle icon-triangle">Москва</a>
+								<ul class="geo-regions-list">
+									<li><a href="#">Москва</a></li>
+									<li><a href="#">Воронеж</a></li>
+								</ul>
+							</div>
+							<div class="stores__tel">
+								<a href="tel:+74957377277">+7 (495) 737-72-77</a>
+							</div>
+							<div class="stores__links">
+								<a href="" class="link-stores">Магазины</a>
+								<a href="" class="link-feedback">Напишите нам</a>
+							</div>
+						</div>
+					</div>
+					<div class="uk-width-1-2">
+						<div class="login-menu">
+							<div class="header-desc-auth">
+								<div class="enter"><a href="">Войти</a></div>
+								<div class="reg"><a href="">Зарегистрироваться</a></div>
+							</div>
+							<div class="header-desc-basket">
+								<a href="" class="icon-basket">Корзина (<span class="counter">0</span>)</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="header-desc__logo">
+				<a href="/" class="logo">
+					<img src="img/logo.png" alt="">
+					<span class="logo__subtitle">SINCE 1997</span>
+				</a>
+			</div>
+
+			<div class="header-desc__bottom">
+				<div class="main-nav-wrapper">
+					<div class="uk-grid">
+						<div class="uk-width-1-1 uk-flex">
+							<nav class="main-nav">
+								<ul class="uk-navbar-nav">
+									<li class="uk-parent" data-uk-dropdown="{justify: '#header-desc', delay: 0, remaintime: 50, mode: 'hover'}">
+										<a href="">Новинки</a>
+										<div class="uk-dropdown uk-dropdown-list">
+											<div class="uk-container uk-container-small">
+												<ul class="uk-grid dropdown-list uk-grid-collapse">
+													<li class="uk-width-1-5">
+														<a href="">test</a>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</li>
+									<li class="uk-parent" data-uk-dropdown="{justify: '#header-desc', delay: 0, remaintime: 50, mode: 'hover'}">
+										<a href="">Женщины</a>
+										<div class="uk-dropdown uk-dropdown-list">
+											<div class="uk-container uk-container-small">
+												<ul class="uk-grid dropdown-list uk-grid-collapse">
+													<li class="uk-width-1-5">
+														<a href="" class="navbar__title">Шубы</a>
+														<ul class="sublist">
+															<li><a href="#">Шубы из норки</a></li>
+															<li><a href="#">Шубы из норкмутона</a></li>
+															<li><a href="#">Шубы из астрагана</a></li>
+															<li><a href="#">Шубы из соболя</a></li>
+															<li><a href="#">Шубы из каракуля</a></li>
+															<li><a href="#">Шубы на трикотажной основе</a></li>
+															<li><a href="#">Шубы из рыси</a></li>
+															<li><a href="#">Шубы из шиншиллы</a></li>
+															<li><a href="#">Шубы из каракуля</a></li>
+															<li><a href="#">Шубы из каракуля</a></li>
+														</ul>
+													</li>
+													<li class="uk-width-1-5">
+														<a href="#" class="navbar__title">Дубленки</a>
+														<ul class="sublist">
+															<li><a href="#">Дубленки короткие</a></li>
+															<li><a href="#">Дубленки с капюшеном</a></li>
+															<li><a href="#">Дубленки длинные</a></li>
+															<li><a href="#">Дубленки из экомеха</a></li>
+														</ul>
+													</li>
+													<li class="uk-width-1-5">
+														<a href="#" class="navbar__title">Изделия из кожи</a>
+														<ul class="sublist">
+															<li><a href="#">Зимние кожаные куртки</a></li>
+															<li><a href="#">Кожаные куртки</a></li>
+															<li><a href="#">Кожаные пальто</a></li>
+															<li><a href="#">Куртки из экокожи</a></li>
+															<li><a href="#">Утепленные кожаные куртки</a></li>
+															<li><a href="#">Кожаные куртки на меху</a></li>
+														</ul>
+													</li>
+													<li class="uk-width-1-5">
+														<a href="#" class="navbar__title">Текстиль</a>
+														<ul class="sublist">
+															<li><a href="#">Пальто</a></li>
+															<li><a href="#">Пуховики</a></li>
+															<li><a href="#">Демисезонные куртки</a></li>
+															<li><a href="#">Ветровки и Плащи</a></li>
+															<li><a href="#">Жилеты</a></li>
+															<li><a href="#">Парки</a></li>
+															<li><a href="#">Полупальто</a></li>
+														</ul>
+													</li>
+													<li class="uk-width-1-5">
+														<a href="#" class="navbar__title">Аксессуары</a>
+														<ul class="sublist">
+															<li><a href="#">Сумки</a></li>
+															<li><a href="#">Головные уборы</a></li>
+														</ul> 
+													</li>
+												</ul>
+											</div>
+										</div>
+									</li>
+									<li class="uk-parent" data-uk-dropdown="{justify: '#header-desc', delay: 0, remaintime: 50, mode: 'hover'}">
+										<a href="">Мужчины</a>
+										<div class="uk-dropdown uk-dropdown-list">
+											<div class="uk-container uk-container-small">
+												<ul class="uk-grid dropdown-list uk-grid-collapse">
+													<li class="uk-width-1-5">
+														<a href="">test</a>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</li>
+									<li class="uk-parent" data-uk-dropdown="{justify: '#header-desc', delay: 0, remaintime: 50, mode: 'hover'}">
+										<a href="">Шубы и меха</a>
+										<div class="uk-dropdown uk-dropdown-list">
+											<div class="uk-container uk-container-small">
+												<ul class="uk-grid dropdown-list uk-grid-collapse">
+													<li class="uk-width-1-5">
+														<a href="">test</a>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</li>
+									<li class="uk-parent" data-uk-dropdown="{justify: '#header-desc', delay: 0, remaintime: 50, mode: 'hover'}">
+										<a href="">Акции</a>
+										<div class="uk-dropdown uk-dropdown-list">
+											<div class="uk-container uk-container-small">
+												<ul class="uk-grid dropdown-list uk-grid-collapse">
+													<li class="uk-width-1-5">
+														<a href="">test</a>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</li>
+									<li class="uk-parent" data-uk-dropdown="{justify: '#header-desc', delay: 0, remaintime: 50, mode: 'hover'}">
+										<a href="">Бренды</a>
+										<div class="uk-dropdown uk-dropdown-list">
+											<div class="uk-container uk-container-small">
+												<ul class="uk-grid dropdown-list uk-grid-collapse">
+													<li class="uk-width-1-5">
+														<a href="">test</a>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</li>
+									<li class="uk-parent"><a href="" class="active">Sale</a></li>
+								</ul>
+							</nav>
+							<div class="main-search">
+								<form action="">
+									<i class="icon-search"></i>
+									<input type="text" placeholder="Поиск по каталогу">
+									<button type="submit">Найти</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<div class="header-mobile uk-hidden-large">
+			<div class="stores">
+				<div class="stores__geo">
+					<a href="#" class="geo-name js__geo-name-toggle icon-triangle">Москва</a>
+					<ul class="geo-regions-list">
+						<li><a href="#">Москва</a></li>
+						<li><a href="#">Воронеж</a></li>
+					</ul>
+				</div>
+				<div class="stores__tel">
+					<a href="tel:+74957377277">+7 (495) 737-72-77</a>
+				</div>
+				<div class="stores__links">
+					<a href="" class="link-stores">Магазины</a>
+				</div>
+			</div>
+			<div class="uk-grid">
+				<div class="uk-width-1-2">
+					<a href="/" class="mobile-logo">
+						<picture>
+							<source media="(max-width: 767px)" srcset="img/small-logo.png">
+							<source media="(min-width: 768px)" srcset="img/logo.png">
+								<img src="logo.png" alt="">
+						</picture>
+					</a>
+				</div>
+				<div class="uk-width-1-2">
+					<ul class="mobile-menu">
+						<li><a href="#" class="icon-user"></a></li>
+						<li><a href="#" class="icon-search js__show-form"></a></li>
+						<li><a href="#" class="icon-basket"></a></li>
+						<li><a href="#offcanvas-menu" class="icon-menu" data-uk-offcanvas></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+		<div id="offcanvas-menu" class="uk-offcanvas">
+			<div class="uk-offcanvas-bar">
+					<div class="uk-panel">
+						<a href="" class="mobile-feedback" data-uk-modal>Напишите нам</a>
+						<ul class="uk-nav">
+
+								<li>
+									<a href="">Новинки</a>
+								</li>
+								<li>
+									<a href="">Женщины <i class="icon-arrow-right js__menu-sublist-toggle"></i></a>
+									<div class="uk-nav__inner hidden">
+										<i class="icon-arrow-left-long navbar-close"><span>Женщины</span></i>
+										<ul class="menu-sublist">
+											<li>
+												<a href="">
+													Шубы<i class="icon-arrow-right js__menu-sublist-toggle"></i>
+												</a>
+												<div class="uk-nav__inner hidden">
+													<i class="icon-arrow-left-long navbar-close"><span>Шубы</span></i>
+													<ul class="menu-sublist">
+														<li>
+															<a href="">
+																Дизайн45645645
+																<i class="js__menu-sublist-toggle"></i>
+															</a>
+														</li>
+														<li>
+															<a href="">Материал</a>
+														</li>
+														<li>
+															<a href="">Страна производитель</a>
+														</li>
+														<li>
+															<a href="">Размер и форма</a>
+														</li>
+													</ul>
+												</div>
+											</li>
+											<li>
+												<a href="">Материал</a>
+											</li>
+											<li>
+												<a href="">Страна производитель</a>
+											</li>
+											<li>
+												<a href="">	Размер и форма</a>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li>
+									<a href="">Мужчинам <i class="icon-arrow-right js__menu-sublist-toggle"></i></a>
+									<div class="uk-nav__inner hidden">
+										<i class="icon-arrow-left navbar-close"></i>
+										<ul class="menu-sublist">
+											<li>
+												<a href="">
+													Дизайн
+												</a>
+											</li>
+											<li>
+												<a href="">
+													Материал
+												</a>
+											</li>
+											<li>
+												<a href="">
+													Страна производитель
+												</a>
+											</li>
+											<li>
+												<a href="">
+													Размер и форма
+												</a>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li><a href="">Шубы и меха</a></li>
+								<li><a href="">Акции</a></li>
+								<li><a href="">Бренды</a></li>
+								<li><a href="" class="active">SALE</a></li>
+						</ul>
+					</div>
+			</div>
+		</div>
+
+		<form action="" class="mobile-form" method="post">
+			<input type="text" class="mobile-search" name="mobile-search">
+			<button type="submit" class="mobile-button"></button>
+		</form>
+	</div>
+</header>
+<!-- end header -->
+
+<!-- begin breadcrumbs-wrapper -->
+<div class="breadcrumbs-wrapper">
+	<div class="uk-container">
+		<ul class="breadcrumbs">
+			<li><a href="">Главная</a></li>
+			<li><a href="">Женщинам</a></li>
+			<li>Дубленки</li>
+		</ul>
+	</div>
+</div>
+<!-- end breadcrumbs-wrapper -->
+		
+	
+<!-- begin content -->
+<section class="content">
+	<div class="uk-container">
+		<div class="uk-grid">
+			<div class="uk-width-1-1 uk-width-large-1-4">
+				<div class="filter">
+					<div class="filter-controls uk-hidden-large">
+						<i class="icon-filter js__toggle-filter uk-float-lrft"></i>
+						<div class="catalog-selects uk-float-right uk-hidden-large">
+							<div class="custom-select-wrapper">
+								<div class="custom-select-label">Сортировать по </div>
+								<select name="" id="" class="js__custom-select" data-theme="default">
+									<option value="">популярности</option>
+									<option value="">цене(убывние)</option>
+									<option value="">цене(возрастание)</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="filter-form-wrapper">
+						<form action="" class="filter-form">
+							<fieldset>
+								<div class="group-title no-arrow">Стоимость</div>
+							</fieldset>
+							<fieldset>
+								<div class="group-title js__group-title-toggle open-title">Размер</div>
+								<div class="group-list open-list">
+									<label for="size-01">
+										<input type="checkbox" id="size-01">
+										<span class="custom-checkbox"></span>
+										<span class="custom-label">36/170</span>
+									</label>
+									<label for="size-02">
+										<input type="checkbox" id="size-02">
+										<span class="custom-checkbox"></span>
+										<span class="custom-label">36/164</span>
+									</label>
+									<label for="size-03">
+										<input type="checkbox" id="size-03">
+										<span class="custom-checkbox"></span>
+										<span class="custom-label">40/170</span>
+									</label>
+									<label for="size-04">
+										<input type="checkbox" id="size-04">
+										<span class="custom-checkbox"></span>
+										<span class="custom-label">40/170</span>
+									</label>
+									<label for="size-05">
+										<input type="checkbox" id="size-05">
+										<span class="custom-checkbox"></span>
+										<span class="custom-label">40/170</span>
+									</label>
+									<label for="size-06">
+										<input type="checkbox" id="size-06">
+										<span class="custom-checkbox"></span>
+										<span class="custom-label">40/170</span>
+									</label>
+									<label for="size-07">
+										<input type="checkbox" id="size-07">
+										<span class="custom-checkbox"></span>
+										<span class="custom-label">40/170</span>
+									</label>
+								</div>
+							</fieldset>
+              <fieldset>
+                <div class="group-title js__group-title-toggle open-title">Цвет</div>
+                <div class="group-list open-list">
+                  <label for="color-01">
+                    <input type="checkbox" id="color-01">
+                    <span class="custom-checkbox"></span>
+                    <span class="custom-label">Черный</span>
+                  </label>
+                  <label for="color-02">
+                    <input type="checkbox" id="color-02">
+                    <span class="custom-checkbox"></span>
+                    <span class="custom-label">Синий</span>
+                  </label>
+                  <label for="color-03">
+                    <input type="checkbox" id="color-03">
+                    <span class="custom-checkbox"></span>
+                    <span class="custom-label">Белый</span>
+                  </label>
+                  <label for="color-04">
+                    <input type="checkbox" id="color-04">
+                    <span class="custom-checkbox"></span>
+                    <span class="custom-label">Бежевый</span>
+                  </label>
+                  <label for="color-05">
+                    <input type="checkbox" id="color-05">
+                    <span class="custom-checkbox"></span>
+                    <span class="custom-label">Зеленый</span>
+                  </label>
+                  <label for="color-06">
+                    <input type="checkbox" id="color-06">
+                    <span class="custom-checkbox"></span>
+                    <span class="custom-label">Голубой</span>
+                  </label>
+                  <label for="color-07">
+                    <input type="checkbox" id="color-07">
+                    <span class="custom-checkbox"></span>
+                    <span class="custom-label">Красный</span>
+                  </label>
+                </div>
+              </fieldset>
+              <fieldset>
+                <div class="group-title js__group-title-toggle open-title">Бренды</div>
+                <div class="group-list open-list">
+                  <label for="brands-01">
+                    <input type="checkbox" id="brands-01">
+                    <span class="custom-checkbox"></span>
+                    <span class="custom-label">H&M</span>
+                  </label>
+                  <label for="brands-02">
+                    <input type="checkbox" id="brands-02">
+                    <span class="custom-checkbox"></span>
+                    <span class="custom-label">Gucci</span>
+                  </label>
+                  <label for="brands-03">
+                    <input type="checkbox" id="brands-03">
+                    <span class="custom-checkbox"></span>
+                    <span class="custom-label">Stefanel</span>
+                  </label>
+                </div>
+              </fieldset>
+              <fieldset>
+                <div class="group-title js__group-title-toggle">Дополнительно</div>
+                <div class="group-list">
+                  <label for="add-opt-01">
+                    <input type="checkbox" id="add-opt-01">
+                    <span class="custom-checkbox"></span>
+                    <span class="custom-label">Тест</span>
+                  </label>
+                  <label for="add-opt-02">
+                    <input type="checkbox" id="add-opt-02">
+                    <span class="custom-checkbox"></span>
+                    <span class="custom-label">Тест</span>
+                  </label>
+                  <label for="add-opt-03">
+                    <input type="checkbox" id="add-opt-03">
+                    <span class="custom-checkbox"></span>
+                    <span class="custom-label">Тест</span>
+                  </label>
+                </div>
+              </fieldset>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="uk-width-1-1 uk-width-large-3-4">
+				<div class="catalog">
+
+					<!-- begin catalog-header -->
+					<div class="catalog-header">
+						<div class="title-h1 uk-visible-large">Женские дубленки</div>
+						<div class="catalog-selects uk-visible-large">
+							<div class="custom-select-wrapper">
+								<div class="custom-select-label">Показывать по </div>
+								<select name="" id="" class="js__custom-select" data-theme="default">
+									<option value="">24</option>
+									<option value="">12</option>
+									<option value="">8</option>
+								</select>
+							</div>
+							<div class="custom-select-wrapper">
+								<div class="custom-select-label">Сортировать по </div>
+								<select name="" id="" class="js__custom-select" data-theme="default">
+									<option value="">популярности</option>
+									<option value="">цене(убывние)</option>
+									<option value="">цене(возрастание)</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<!-- end catalog-header -->
+
+					<!-- begin catalog-body -->
+					<div class="catalog-body">
+								 
+									<div class="card">
+										<div class="card__inner">
+											<div class="card__top">
+												<div class="card__img">
+													<a href=""><img data-src="img/catalog-img-1-314x470.png" class="lazy" alt=""></a>
+													<div class="card-action-wrapper">
+														<div class="card-favorite">
+															<a href="" class="icon-favorite js__check-favorite"></a>
+														</div>
+														<ul class="card-colors-list">
+															<li><a href="#" class="color" style="background-color: #833b3a;"></a></li>
+															<li><a href="#" class="color" style="background-color: #3d3b41;"></a></li>
+															<li><a href="#" class="color" style="background-color: #d8d8d8;"></a></li>
+														</ul>
+													</div>
+													<div class="stocks">
+																													<div class="stocks__new">Новинка</div>
+																																									</div>
+													<div class="card-sizes-wrapper">
+														<ul class="sizes-list">
+															<li><a href="#">36/170</a></li>
+															<li><a href="#">36/170</a></li>
+															<li><a href="#">36/170</a></li>
+															<li><a href="#">36/170</a></li>
+														</ul>
+													</div>
+													<div class="card-preview">
+														<a class="preview">Быстрый просмотр</a>
+													</div>
+												</div>
+											</div>
+											<div class="card__middle">
+												<div class="card__product-name"><a href="">Куртка женская</a></div>
+												<div class="card__product-price">
+													<div class="current-price">7 990р.</div>
+													<div class="old-price"></div>
+												</div>
+											</div>
+											<div class="card__bottom">
+												<div class="card__product-brand"><a href="">Gucci</a></div>
+												<div class="card__offer">
+													<a href="">
+														<span class="card__offer-text">В рассрочку</span> от <span class="card__offer-value">491 р.</span>
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								 
+									<div class="card">
+										<div class="card__inner">
+											<div class="card__top">
+												<div class="card__img">
+													<a href=""><img data-src="img/catalog-img-2-314x470.png" class="lazy" alt=""></a>
+													<div class="card-action-wrapper">
+														<div class="card-favorite">
+															<a href="" class="icon-favorite js__check-favorite"></a>
+														</div>
+														<ul class="card-colors-list">
+															<li><a href="#" class="color" style="background-color: #833b3a;"></a></li>
+															<li><a href="#" class="color" style="background-color: #3d3b41;"></a></li>
+															<li><a href="#" class="color" style="background-color: #d8d8d8;"></a></li>
+														</ul>
+													</div>
+													<div class="stocks">
+																																											<div class="stocks__discount">-20%</div>
+																											</div>
+													<div class="card-sizes-wrapper">
+														<ul class="sizes-list">
+															<li><a href="#">36/170</a></li>
+															<li><a href="#">36/170</a></li>
+															<li><a href="#">36/170</a></li>
+															<li><a href="#">36/170</a></li>
+														</ul>
+													</div>
+													<div class="card-preview">
+														<a class="preview">Быстрый просмотр</a>
+													</div>
+												</div>
+											</div>
+											<div class="card__middle">
+												<div class="card__product-name"><a href="">Жилет из соболя с отделкой из свакары по бокам</a></div>
+												<div class="card__product-price">
+													<div class="current-price">731 493 р.</div>
+													<div class="old-price">965 493 р. </div>
+												</div>
+											</div>
+											<div class="card__bottom">
+												<div class="card__product-brand"><a href="">Avanti</a></div>
+												<div class="card__offer">
+													<a href="">
+														<span class="card__offer-text">В рассрочку</span> от <span class="card__offer-value">491 р.</span>
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								 
+									<div class="card">
+										<div class="card__inner">
+											<div class="card__top">
+												<div class="card__img">
+													<a href=""><img data-src="img/catalog-img-3-314x470.png" class="lazy" alt=""></a>
+													<div class="card-action-wrapper">
+														<div class="card-favorite">
+															<a href="" class="icon-favorite js__check-favorite"></a>
+														</div>
+														<ul class="card-colors-list">
+															<li><a href="#" class="color" style="background-color: #833b3a;"></a></li>
+															<li><a href="#" class="color" style="background-color: #3d3b41;"></a></li>
+															<li><a href="#" class="color" style="background-color: #d8d8d8;"></a></li>
+														</ul>
+													</div>
+													<div class="stocks">
+																																									</div>
+													<div class="card-sizes-wrapper">
+														<ul class="sizes-list">
+															<li><a href="#">36/170</a></li>
+															<li><a href="#">36/170</a></li>
+															<li><a href="#">36/170</a></li>
+															<li><a href="#">36/170</a></li>
+														</ul>
+													</div>
+													<div class="card-preview">
+														<a class="preview">Быстрый просмотр</a>
+													</div>
+												</div>
+											</div>
+											<div class="card__middle">
+												<div class="card__product-name"><a href="">Норковая Шуба</a></div>
+												<div class="card__product-price">
+													<div class="current-price">124 990 р.</div>
+													<div class="old-price"></div>
+												</div>
+											</div>
+											<div class="card__bottom">
+												<div class="card__product-brand"><a href="">Елена Фурс</a></div>
+												<div class="card__offer">
+													<a href="">
+														<span class="card__offer-text">В рассрочку</span> от <span class="card__offer-value">491 р.</span>
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								 
+									<div class="card">
+										<div class="card__inner">
+											<div class="card__top">
+												<div class="card__img">
+													<a href=""><img data-src="img/catalog-img-4-314x470.png" class="lazy" alt=""></a>
+													<div class="card-action-wrapper">
+														<div class="card-favorite">
+															<a href="" class="icon-favorite js__check-favorite"></a>
+														</div>
+														<ul class="card-colors-list">
+															<li><a href="#" class="color" style="background-color: #833b3a;"></a></li>
+															<li><a href="#" class="color" style="background-color: #3d3b41;"></a></li>
+															<li><a href="#" class="color" style="background-color: #d8d8d8;"></a></li>
+														</ul>
+													</div>
+													<div class="stocks">
+																																									</div>
+													<div class="card-sizes-wrapper">
+														<ul class="sizes-list">
+															<li><a href="#">36/170</a></li>
+															<li><a href="#">36/170</a></li>
+															<li><a href="#">36/170</a></li>
+															<li><a href="#">36/170</a></li>
+														</ul>
+													</div>
+													<div class="card-preview">
+														<a class="preview">Быстрый просмотр</a>
+													</div>
+												</div>
+											</div>
+											<div class="card__middle">
+												<div class="card__product-name"><a href="">Куртка женская</a></div>
+												<div class="card__product-price">
+													<div class="current-price">7 990р.</div>
+													<div class="old-price"></div>
+												</div>
+											</div>
+											<div class="card__bottom">
+												<div class="card__product-brand"><a href="">Gucci</a></div>
+												<div class="card__offer">
+													<a href="">
+														<span class="card__offer-text">В рассрочку</span> от <span class="card__offer-value">491 р.</span>
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								 
+									<div class="card">
+										<div class="card__inner">
+											<div class="card__top">
+												<div class="card__img">
+													<a href=""><img data-src="img/catalog-img-5-314x470.png" class="lazy" alt=""></a>
+													<div class="card-action-wrapper">
+														<div class="card-favorite">
+															<a href="" class="icon-favorite js__check-favorite"></a>
+														</div>
+														<ul class="card-colors-list">
+															<li><a href="#" class="color" style="background-color: #833b3a;"></a></li>
+															<li><a href="#" class="color" style="background-color: #3d3b41;"></a></li>
+															<li><a href="#" class="color" style="background-color: #d8d8d8;"></a></li>
+														</ul>
+													</div>
+													<div class="stocks">
+																																											<div class="stocks__discount">-20%</div>
+																											</div>
+													<div class="card-sizes-wrapper">
+														<ul class="sizes-list">
+															<li><a href="#">36/170</a></li>
+															<li><a href="#">36/170</a></li>
+															<li><a href="#">36/170</a></li>
+															<li><a href="#">36/170</a></li>
+														</ul>
+													</div>
+													<div class="card-preview">
+														<a class="preview">Быстрый просмотр</a>
+													</div>
+												</div>
+											</div>
+											<div class="card__middle">
+												<div class="card__product-name"><a href="">Жилет из соболя с отделкой из свакары по бокам</a></div>
+												<div class="card__product-price">
+													<div class="current-price">731 493 р.</div>
+													<div class="old-price">965 493 р. </div>
+												</div>
+											</div>
+											<div class="card__bottom">
+												<div class="card__product-brand"><a href="">Avanti</a></div>
+												<div class="card__offer">
+													<a href="">
+														<span class="card__offer-text">В рассрочку</span> от <span class="card__offer-value">491 р.</span>
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								 
+									<div class="card">
+										<div class="card__inner">
+											<div class="card__top">
+												<div class="card__img">
+													<a href=""><img data-src="img/catalog-img-6-314x470.png" class="lazy" alt=""></a>
+													<div class="card-action-wrapper">
+														<div class="card-favorite">
+															<a href="" class="icon-favorite js__check-favorite"></a>
+														</div>
+														<ul class="card-colors-list">
+															<li><a href="#" class="color" style="background-color: #833b3a;"></a></li>
+															<li><a href="#" class="color" style="background-color: #3d3b41;"></a></li>
+															<li><a href="#" class="color" style="background-color: #d8d8d8;"></a></li>
+														</ul>
+													</div>
+													<div class="stocks">
+																																											<div class="stocks__discount">-20%</div>
+																											</div>
+													<div class="card-sizes-wrapper">
+														<ul class="sizes-list">
+															<li><a href="#">36/170</a></li>
+															<li><a href="#">36/170</a></li>
+															<li><a href="#">36/170</a></li>
+															<li><a href="#">36/170</a></li>
+														</ul>
+													</div>
+													<div class="card-preview">
+														<a class="preview">Быстрый просмотр</a>
+													</div>
+												</div>
+											</div>
+											<div class="card__middle">
+												<div class="card__product-name"><a href="">Жилет из соболя с отделкой из свакары по бокам</a></div>
+												<div class="card__product-price">
+													<div class="current-price">731 493 р.</div>
+													<div class="old-price">965 493 р. </div>
+												</div>
+											</div>
+											<div class="card__bottom">
+												<div class="card__product-brand"><a href="">Avanti</a></div>
+												<div class="card__offer">
+													<a href="">
+														<span class="card__offer-text">В рассрочку</span> от <span class="card__offer-value">491 р.</span>
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								 
+									<div class="card">
+										<div class="card__inner">
+											<div class="card__top">
+												<div class="card__img">
+													<a href=""><img data-src="img/catalog-img-7-314x470.png" class="lazy" alt=""></a>
+													<div class="card-action-wrapper">
+														<div class="card-favorite">
+															<a href="" class="icon-favorite js__check-favorite"></a>
+														</div>
+														<ul class="card-colors-list">
+															<li><a href="#" class="color" style="background-color: #833b3a;"></a></li>
+															<li><a href="#" class="color" style="background-color: #3d3b41;"></a></li>
+															<li><a href="#" class="color" style="background-color: #d8d8d8;"></a></li>
+														</ul>
+													</div>
+													<div class="stocks">
+																																											<div class="stocks__discount">-20%</div>
+																											</div>
+													<div class="card-sizes-wrapper">
+														<ul class="sizes-list">
+															<li><a href="#">36/170</a></li>
+															<li><a href="#">36/170</a></li>
+															<li><a href="#">36/170</a></li>
+															<li><a href="#">36/170</a></li>
+														</ul>
+													</div>
+													<div class="card-preview">
+														<a class="preview">Быстрый просмотр</a>
+													</div>
+												</div>
+											</div>
+											<div class="card__middle">
+												<div class="card__product-name"><a href="">Жилет из соболя с отделкой из свакары по бокам</a></div>
+												<div class="card__product-price">
+													<div class="current-price">731 493 р.</div>
+													<div class="old-price">965 493 р. </div>
+												</div>
+											</div>
+											<div class="card__bottom">
+												<div class="card__product-brand"><a href="">Avanti</a></div>
+												<div class="card__offer">
+													<a href="">
+														<span class="card__offer-text">В рассрочку</span> от <span class="card__offer-value">491 р.</span>
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								 
+									<div class="card">
+										<div class="card__inner">
+											<div class="card__top">
+												<div class="card__img">
+													<a href=""><img data-src="img/catalog-img-8-314x470.png" class="lazy" alt=""></a>
+													<div class="card-action-wrapper">
+														<div class="card-favorite">
+															<a href="" class="icon-favorite js__check-favorite"></a>
+														</div>
+														<ul class="card-colors-list">
+															<li><a href="#" class="color" style="background-color: #833b3a;"></a></li>
+															<li><a href="#" class="color" style="background-color: #3d3b41;"></a></li>
+															<li><a href="#" class="color" style="background-color: #d8d8d8;"></a></li>
+														</ul>
+													</div>
+													<div class="stocks">
+																																											<div class="stocks__discount">-20%</div>
+																											</div>
+													<div class="card-sizes-wrapper">
+														<ul class="sizes-list">
+															<li><a href="#">36/170</a></li>
+															<li><a href="#">36/170</a></li>
+															<li><a href="#">36/170</a></li>
+															<li><a href="#">36/170</a></li>
+														</ul>
+													</div>
+													<div class="card-preview">
+														<a class="preview">Быстрый просмотр</a>
+													</div>
+												</div>
+											</div>
+											<div class="card__middle">
+												<div class="card__product-name"><a href="">Жилет из соболя с отделкой из свакары по бокам</a></div>
+												<div class="card__product-price">
+													<div class="current-price">731 493 р.</div>
+													<div class="old-price">965 493 р. </div>
+												</div>
+											</div>
+											<div class="card__bottom">
+												<div class="card__product-brand"><a href="">Avanti</a></div>
+												<div class="card__offer">
+													<a href="">
+														<span class="card__offer-text">В рассрочку</span> от <span class="card__offer-value">491 р.</span>
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								 
+									<div class="card">
+										<div class="card__inner">
+											<div class="card__top">
+												<div class="card__img">
+													<a href=""><img data-src="img/catalog-img-9-314x470.png" class="lazy" alt=""></a>
+													<div class="card-action-wrapper">
+														<div class="card-favorite">
+															<a href="" class="icon-favorite js__check-favorite"></a>
+														</div>
+														<ul class="card-colors-list">
+															<li><a href="#" class="color" style="background-color: #833b3a;"></a></li>
+															<li><a href="#" class="color" style="background-color: #3d3b41;"></a></li>
+															<li><a href="#" class="color" style="background-color: #d8d8d8;"></a></li>
+														</ul>
+													</div>
+													<div class="stocks">
+																																											<div class="stocks__discount">-20%</div>
+																											</div>
+													<div class="card-sizes-wrapper">
+														<ul class="sizes-list">
+															<li><a href="#">36/170</a></li>
+															<li><a href="#">36/170</a></li>
+															<li><a href="#">36/170</a></li>
+															<li><a href="#">36/170</a></li>
+														</ul>
+													</div>
+													<div class="card-preview">
+														<a class="preview">Быстрый просмотр</a>
+													</div>
+												</div>
+											</div>
+											<div class="card__middle">
+												<div class="card__product-name"><a href="">Жилет из соболя с отделкой из свакары по бокам</a></div>
+												<div class="card__product-price">
+													<div class="current-price">731 493 р.</div>
+													<div class="old-price">965 493 р. </div>
+												</div>
+											</div>
+											<div class="card__bottom">
+												<div class="card__product-brand"><a href="">Avanti</a></div>
+												<div class="card__offer">
+													<a href="">
+														<span class="card__offer-text">В рассрочку</span> от <span class="card__offer-value">491 р.</span>
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+													</div>
+					<!-- end catalog-body -->
+
+<ul class="uk-pagination">
+	<li class="uk-pagination-previous"><a href="">Предыдущая</a></li>
+	<li class="uk-active"><span>1</span></li>
+	<li><a href="">2</a></li>
+	<li><a href="">3</a></li>
+	<li><a href="">4</a></li>
+	<li><span>...</span></li>
+	<li><a href="">128</a></li>
+	<li class="uk-pagination-next"><a href="">Следующая</a></li>
+</ul>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- end content -->
+<footer class="footer">
+	<div class="uk-container">
+		<div class="footer__inner">
+			<div class="footer__top">
+				<div class="uk-grid">
+					<div class="uk-width-1-1 uk-width-medium-1-4 uk-width-large-1-5">
+						<div class="footer__title" data-role="toggle-list">О Компании <i class="icon-arrow-right"></i></div>
+						<ul class="footer-nav-list">
+							<li><a href="#">О нас</a></li>
+							<li><a href="#">Новости</a></li>
+							<li><a href="#">Сотрудничество</a></li>
+							<li><a href="#">Магазины</a></li>
+							<li><a href="#">Вакансии</a></li>
+							<li><a href="#">Контакты</a></li>
+							<li><a href="#">Обратная связь</a></li>
+							<li><a href="#">Меховой салон</a></li>
+						</ul>
+					</div>
+					<div class="uk-width-1-1 uk-width-medium-1-4 uk-width-large-1-5">
+						<div class="footer__title" data-role="toggle-list">Покупателю <i class="icon-arrow-right"></i></div>
+						<ul class="footer-nav-list">
+							<li><a href="#">Акции</a></li>
+							<li><a href="#">Программы лояльности</a></li>
+							<li><a href="#">Гарантия</a></li>
+							<li><a href="#">Возврат</a></li>
+							<li><a href="#">Доставка</a></li>
+							<li><a href="#">Оплата</a></li>
+							<li><a href="#">Подарочнык карты</a></li>
+						</ul>
+					</div>
+					<div class="uk-width-1-1 uk-width-medium-1-4 uk-width-large-1-5">
+						<div class="footer__title" data-role="toggle-list">Услуги <i class="icon-arrow-right"></i></div>
+						<ul class="footer-nav-list">
+							<li><a href="#">Мастерская</a></li>
+							<li><a href="#">Кредит</a></li>
+							<li><a href="#">Маркировка</a></li>
+							<li><a href="#">Химчистка</a></li>
+							<li><a href="#">Хранение товаров</a></li>
+						</ul>
+					</div>
+					<div class="uk-width-1-1 uk-width-medium-1-4 uk-width-large-1-5">
+						<div class="footer__title" data-role="toggle-list">Интернет-магазин <i class="icon-arrow-right"></i></div>
+						<ul class="footer-nav-list">
+							<li><a href="#">Бренды</a></li>
+							<li><a href="#">Женщинам</a></li>
+							<li><a href="#">Мужчинам</a></li>
+							<li><a href="#">Меха и шубы</a></li>
+							<li><a href="#">Аксессуары</a></li>
+						</ul>
+					</div>
+					<div class="uk-width-1-1 uk-width-medium-1-1 uk-width-large-1-5">
+						<div class="footer__title">Мы в соцсетях </div>
+						<ul class="footer-nav-list soc-links">
+							<li><a href="#" class="soc-icon icon-fb">Facebook</a></li>
+							<li><a href="#" class="soc-icon icon-vk">Вконтакте</a></li>
+							<li><a href="#" class="soc-icon icon-inst">Instagram</a></li>
+							<li><a href="#" class="soc-icon icon-ok">Одноклассники</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="footer__bottom">
+				<div class="uk-grid">
+					<div class="uk-width-1-1 uk-width-small-1-2 uk-width-medium-1-4">
+						<div class="copyright">© 2018 ООО «АЛЕКС И КО»</div>
+						<div class="footer-logo">
+							<a href="">
+								<img src="img/small-logo.png" alt="">
+							</a>
+						</div>
+					</div>
+					<div class="uk-width-1-1 uk-width-small-1-2 uk-width-medium-2-4">
+						<div class="pay-type">
+							<div class="pay-type__text">Оплатить покупки можно наличным или безналичным расчётом</div>
+							<div class="pay-type__list">
+								<img src="img/visa.png" alt="">
+								<img src="img/mastercard.png" alt="">
+								<img src="img/mir.png" alt="">
+							</div>
+						</div>
+					</div>
+					<div class="uk-width-1-1 uk-width-small-1-2 uk-width-medium-1-4">
+						<div class="dev">
+							<a href="https://aevrika.ru">Разработка и продвижение — «ЭВРИКА»</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" defer></script>
+<script src="libs/lazyLoad/jquery.lazy.min.js" defer></script>
+<script src="libs/lazyLoad/jquery.lazy.plugins.min.js" defer></script>
+<script src="libs/jquery-mask/jquery.maskedinput.min.js" defer></script>
+<script src="libs/js/uikit.min.js" defer></script>
+<script src="libs/slick/slick.min.js" defer></script>
+<script src="libs/svg4everybody.min.js" defer></script>
+<script src="libs/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js" defer></script>
+<script src="libs/select2/select2.min.js" defer></script>
+<script src="libs/ofi.min.js" defer></script>
+<script src="js/sliders.js" defer></script>
+<script src="js/catalog.js" defer></script>
+<script src="js/detail.js" defer></script>
+<script src="js/main.js" defer></script>
+</body>
+</html>

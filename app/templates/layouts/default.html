@@ -1,0 +1,13 @@
+{% include "../includes/head.html" %}
+<body>
+{% include "../includes/header.html" %}
+
+{% if main == false %}
+{% include "../includes/breadcrumbs.html" %}		
+{% endif %}	
+{% block content %}{% endblock %}
+{% include "../includes/footer.html" %}
+{% include "../includes/modals.html" %}
+{% include "../includes/scripts.html" %}
+</body>
+</html>

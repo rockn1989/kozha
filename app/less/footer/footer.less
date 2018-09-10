@@ -1,0 +1,150 @@
+/*______ PAGE FOOTER ______*/
+
+.footer {
+	&__inner {
+		background-color: #f4f4f4;
+		@media @mob-w {
+			padding: 40px 10px;
+		}
+		@media @tablet-w {
+			padding: 70px 8.5% 50px;
+		}
+	}
+	&__top {
+		padding-bottom: 40px;
+		border-bottom: 1px solid #cccccc;
+	}
+	&__bottom {
+		padding: 45px 0;
+	}
+	&__title {
+		position: relative;
+		display: inline-block;
+		color: @red;
+		font-size: 14px;
+		font-weight: bold;
+		letter-spacing: 1.23px;
+		text-transform: uppercase;
+		@media @mob-w {
+			margin-bottom: 20px;
+		}
+		@media @tablet-w {
+			margin-bottom: 30px;
+		}
+		i {
+			position: absolute;
+			right: 0;
+			transform-origin: center center;
+			transition: transform .3s ease;
+			&.open {
+				transform: rotate(90deg);
+			}
+		}
+		@media @mob-w {
+			width: 100%;
+		}
+		@media @tablet-w {
+			i {
+				display: none;
+			}
+		}
+	}
+	.copyright {
+		margin-bottom: 15px;
+		color: #3a3a3a;
+		opacity: .5;
+		font-size: 12px;
+	}
+	.pay-type {
+		padding-left: 5%;
+		.clearfix();
+		@media @mob-w {
+			margin: 30px 0;
+			padding-left: 0;
+		}
+		@media (min-width: 480px) {
+			margin-top: 0;
+		}
+		@media @tablet-w {
+			margin: 0;
+			padding-left: 5%;
+		}
+		&__text {
+			max-width: 215px;
+			color: @gray;
+			font-size: 12px;
+			opacity: 0.5;
+			@media @mob-w {
+				margin-bottom: 15px;
+				float: none;
+			}
+			@media @tablet-w {
+				margin-right: 65px;
+			}
+			@media @desk-w {
+				float: left;
+			}
+		}
+		&__list {
+			overflow: hidden;
+			img {
+				margin-right: 30px;
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+		}
+	}
+	.dev {
+		a {
+			padding-left: 25px;
+			display: block;
+			color: @gray;
+			opacity: 0.5;
+			background: url('../img/ae_logo2.svg') 0 0 no-repeat;
+			&:hover {
+				opacity: 1;
+				background: url('../img/ae_logo2-hover.svg') 0 0 no-repeat;
+			}
+		}
+	}
+}
+
+.footer-nav-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	@media @mob-w {
+		padding-bottom: 15px;
+		display :none;
+		&.soc-links {
+			display: block;
+		}
+	}
+	@media @tablet-w {
+		display: block !important;
+	}
+	@media @desk-w {
+		padding-bottom: 0;
+	}
+	li {
+		margin-bottom: 15px;
+		a {
+			color: @black;
+			font-size: 12px;
+			&.soc-icon {
+				position: relative;
+				padding-left: 35px;
+				font-family: @mainFont !important;
+				&:before {
+					position: absolute;
+					left: 0;
+					font-family: 'icomoon' !important;
+					font-size: 20px;
+				}
+			}
+		}
+	}
+}
+
+

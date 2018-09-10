@@ -1,0 +1,261 @@
+/*______ Карточка товара ______*/
+
+.card {
+	margin-bottom: 22px;
+	padding: 15px;
+	max-width: 345px;
+	height: 100%;
+	border: 1px solid transparent;
+	border-radius: 3px;
+	background-color: #ffffff;
+	transition: box-shadow .3s, border-color .3s ease;
+	@media @mob-w {
+		border-color: #dadada;
+	}
+	@media @desk-w {
+		border-color: transparent;
+	}
+	&:hover {
+		box-shadow: 0 22px 42px -21px rgba(0, 0, 0, 0.19);
+		border-color: #dadada;
+		.card__product-name {
+			a {
+				&:after {
+					width: 100%;
+				}
+			}
+		}
+		.card__offer {
+			opacity: 1;
+		}
+		.card-action-wrapper {
+			right: 20px;
+		}
+		.card-sizes-wrapper {
+			bottom: 5px;
+		}
+		.card-preview {
+			bottom: 35%;
+		}
+	}
+	&__top {
+		position: relative;
+		overflow: hidden;
+	}
+	&__middle,
+	&__bottom {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+	&__img {
+		position: relative;
+		margin-bottom: 25px;
+		img {
+			transition: all .3s ease;
+			&.lazy {
+				min-height: 450px;
+			}
+		}
+	}
+	&__product-name {
+		margin-bottom: 10px;
+		width: 70%;
+		a {
+		position: relative;
+		display: inline-block;
+		font-size: 18px;
+		line-height: 21px;
+		color: @red;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+	&__product-brand {
+		a {
+			font-size: 18px;
+			font-family: 'TI';
+			color: @gray;
+		}
+	}
+	&__product-price {
+		min-width: 30%;
+		color: @gray;
+		text-align: right;
+		font-size: 16px;
+		line-height: 21px;
+		font-weight: bold;
+		.current-price {
+		}
+		.old-price {
+			position: relative;
+			display: inline-block;
+			&:after {
+				content: '';
+				position: absolute;
+				top: 50%;
+				left: 0;
+				width: 100%;
+				height: 1px;
+				background-color: #c4393d;
+			}
+			&:empty {
+				display: none;
+			}
+		}
+		*+.old-price {
+			margin-top: 5px;
+		}
+	}
+	&__offer {
+		opacity: 0;
+		transition: opacity .3s ease;
+		a {
+			color: @black;
+			font-size: 14px;
+			span.card__offer-text {
+				border-bottom: 1px dashed #979797;
+			}
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+
+.card-action-wrapper {
+	position: absolute;
+	top: 20px;
+	transition: right .3s ease;
+	@media @mob-w {
+		right: 20px;
+	}
+	@media @desk-w {
+		right: -100%;
+	}
+}
+
+.card-favorite {
+	margin-bottom: 20px;
+	font-size: 24px;
+	a {
+		display: block;
+		height: 24px;
+		&:before {
+			font-size: 24px;
+			display: block;
+		}
+		&:hover {
+			text-decoration: none;
+			&:before {
+				margin-top: -1px;
+				content: '\e90c';
+				color: @red;
+				font-size: 27px;
+			}
+		}
+		&.check {
+			&:before {
+				margin-top: -1px;
+				content: '\e90c';
+				color: @red;
+				font-size: 27px;
+			}
+		}
+	}
+	&:hover {
+		margin-bottom: 21px;
+	}
+}
+
+.card-colors-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	li {
+		margin-bottom: 10px;
+		a {
+			display: block;
+			width: 24px;
+			height: 24px;
+		}
+	}
+}
+
+.card-sizes-wrapper {
+	position: absolute;
+	
+	left: 20px;
+	right: 20px;
+	transition: bottom .3s ease;
+	@media @mob-w {
+		bottom: 5px;
+	}
+	@media @desk-w {
+		bottom: -100%;
+	}
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		font-size: 0;
+		display: flex;
+		flex-wrap: wrap;
+		li {
+			margin-bottom: 10px;
+			margin-right: 1.2%;
+			display: inline-block;
+			a {
+				padding: 8px 7px;
+				color: @black;
+				font-size: 14px;
+				line-height: 1;
+				display: block;
+				border: 1px solid #dadada;
+				background-color: #ffffff;
+				border-radius: 3px;
+				&:hover {
+					color: #ffffff;
+					text-decoration: none;
+					background-color: #5d3131;
+					border-color: #5d3131;
+				}
+				&.checked {
+					color: #ffffff;
+					background-color: #5d3131;
+					border-color: #5d3131;
+				}
+			}
+		}
+	}
+}
+
+
+.card-preview {
+	position: absolute;
+	bottom: -50%;
+	padding: 3px 5px;
+	width: 80%;
+	left: 10%;
+	right: 10%;
+	text-align: center;
+	-webkit-transition: bottom 0.3s ease-out;
+	-o-transition: bottom 0.3s ease-out;
+	-moz-transition: bottom 0.3s ease-out;
+	transition: bottom 0.3s ease-out;
+	z-index: 76;
+	background: rgba(38, 52, 69, 0.5);
+	.preview {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 35px;
+    letter-spacing: 1.8px;
+    color: #ffffff;
+    text-transform: uppercase;
+    &:hover {
+    	text-decoration: none;
+    }
+	}
+}
