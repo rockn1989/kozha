@@ -1036,7 +1036,7 @@ svg {
 }
 
 .mobile-menu li {
-  margin-left: 10px;
+  margin-left: 5px;
   display: inline-block;
   vertical-align: top;
 }
@@ -1456,11 +1456,6 @@ svg {
 .catalog-body .card {
   display: inline-block;
   vertical-align: top;
-}
-
-.catalog-body .card-sizes-wrapper {
-  right: 0;
-  left: 20px;
 }
 
 /*______ Детальная карточки товара ______*/
@@ -1988,7 +1983,7 @@ svg {
 
 .card__product-name {
   margin-bottom: 10px;
-  width: 70%;
+  width: 65%;
 }
 
 .card__product-name a {
@@ -2126,8 +2121,8 @@ svg {
 
 .card-sizes-wrapper {
   position: absolute;
-  left: 20px;
-  right: 20px;
+  left: 0;
+  width: 100%;
   -webkit-transition: bottom .3s ease;
   -o-transition: bottom .3s ease;
   -moz-transition: bottom .3s ease;
@@ -2137,8 +2132,6 @@ svg {
 .card-sizes-wrapper ul {
   margin: 0;
   padding: 0;
-  list-style: none;
-  font-size: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -2147,11 +2140,13 @@ svg {
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  width: 100%;
+  list-style: none;
+  font-size: 0;
 }
 
 .card-sizes-wrapper ul li {
-  margin-bottom: 10px;
-  margin-right: 1.2%;
+  margin: 0 1.2% 10px;
   display: inline-block;
 }
 
@@ -2474,7 +2469,7 @@ svg {
 }
 
 .footer .dev a {
-  padding-left: 25px;
+  padding: 3px 0 3px 25px;
   display: block;
   color: #3a3a3a;
   opacity: 0.5;
@@ -3073,8 +3068,16 @@ svg {
     margin-top: 10px;
   }
 
+  .list-stores .store__subway {
+    width: 100%;
+  }
+
   .card {
     border-color: #dadada;
+  }
+
+  .card__img img.lazy {
+    min-height: 400px;
   }
 
   .card-action-wrapper {
@@ -3083,6 +3086,10 @@ svg {
 
   .card-sizes-wrapper {
     bottom: 5px;
+  }
+
+  .card-sizes-wrapper ul li {
+    margin: 0 0.6% 10px;
   }
 
   .filter-form-wrapper {
@@ -3204,6 +3211,12 @@ svg {
   }
 }
 
+@media (min-width: 425px) {
+  .mobile-menu li {
+    margin-left: 10px;
+  }
+}
+
 @media (min-width: 480px) {
   .products-style-list .item {
     width: 50%;
@@ -3283,6 +3296,10 @@ svg {
   .list-stores .store__address {
     margin-right: 5%;
     width: 50%;
+  }
+
+  .card-sizes-wrapper ul li {
+    margin: 0 1.2% 10px;
   }
 
   .footer__inner {
@@ -3469,7 +3486,7 @@ svg {
   .main-nav {
     padding: 0 2%;
     padding-left: 12%;
-    width: 80%;
+    width: 82%;
   }
 
   .detail-product-sliders .detail-product-big-slider {
@@ -3515,7 +3532,7 @@ svg {
   }
 
   .main-search {
-    width: 20%;
+    width: 18%;
   }
 
   .main-search input {
