@@ -65,6 +65,7 @@ gulp.task("less:build", function() {
 	return gulp.src("app/less/main.less")
 				.pipe(less())
 				.pipe(autoprefixer(["last 15 version", "> 1%", 'firefox 14', "ie 8", "ie 7"], {cascade: true}))
+				.pipe(gcmq())
 				.pipe(gulp.dest("app/css"))
 				.pipe(rename("style.css"))
 				.pipe(gulp.dest("build/app/css"));
