@@ -2140,6 +2140,11 @@ svg {
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   width: 100%;
   list-style: none;
   font-size: 0;
@@ -3401,6 +3406,14 @@ svg {
     bottom: -100%;
   }
 
+  .card-sizes-wrapper ul {
+    padding: 0 2.5%;
+  }
+
+  .card-sizes-wrapper ul li {
+    margin: 0 0.5% 10px;
+  }
+
   .filter-form-wrapper {
     margin-top: 0;
     padding: 0;
@@ -3487,6 +3500,10 @@ svg {
     padding: 0 2%;
     padding-left: 12%;
     width: 82%;
+  }
+
+  .card-sizes-wrapper ul li {
+    margin: 0 1% 10px;
   }
 
   .detail-product-sliders .detail-product-big-slider {
