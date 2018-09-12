@@ -1,0 +1,439 @@
+/*______ Оформление заказа ______*/
+
+
+.order-title {
+	margin-bottom: 40px;
+	color: #503926;
+	font-size: 18px;
+	text-transform: uppercase;
+	letter-spacing: 1.58px;
+}
+
+.order-contacts-info {
+	input,
+	textarea {
+		width: 97%;
+	}
+	sup {
+		padding-top: 5px;
+		margin-left: 1%;
+		display: inline-block;
+		width: 1%;
+		font-size: 24px;
+		color: #c4393d;
+	}
+	@media @desk-w {
+		max-width: 50%;
+	}
+}
+
+.required-fields {
+	margin-top: 30px;
+	font-size: 12px;
+	line-height: 30px;
+	sup {
+		top: 0;
+		font-size: 24px;
+		color: #c4393d;
+	}
+}
+
+.radio-wrapper {
+	margin-top: 30px;
+	padding-bottom: 30px;
+	border-bottom: 1px solid #dadada;
+	label {
+		margin-right: 50px;
+		@media @mob-w {
+			margin-right: 0;
+			margin-bottom: 15px;
+			display: block;
+		}
+		@media (min-width: 550px) {
+			margin-bottom: 0;
+			display: inline-block;
+			margin-right: 50px;
+		}
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+
+.radio-content {
+	&.toggle {
+		position: relative;
+		height: 500px;
+		&:after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+			background: #ffffff url('../img/tail-spin.svg') center no-repeat;
+			-webkit-background-size: 30px 30px;
+			background-size: 30px 30px;
+		}
+	}
+	.list-stores {
+		label {
+			margin-top: 15px;
+			margin-right: 2%;
+			display: inline-block;
+			width: 5%;
+			@media @mob-w {
+				margin-top: 18px;
+				margin-right: 20px;
+			}
+			@media @tablet-w {
+				margin-right: 2%;
+			}
+
+		}
+		.store__subway {
+			@media @mob-w {
+				width: 75%;
+			}
+			@media @tablet-w {
+				width: 21%;
+			}
+		}
+		.store__address {
+			@media @desk-w {
+				width: 48%;
+			}
+		}
+		.store__timework {
+			width: 100%;
+			@media @tablet-w {
+				width: 11%;
+			}
+		}
+
+	}
+}
+
+.order-pay {
+	label {
+		margin-bottom: 22px;
+		display: block;
+	}
+}
+
+
+/*______ Список заказа ______*/
+
+.order-list {
+	&__header {
+		padding: 10px 0;
+		color: @black;
+		font-family: 'Helvetica';
+		background-color: #eaeaea;
+		font-size: 0;
+		&>div {
+			display: inline-block;
+			vertical-align: top;
+			font-size: 12px;
+		}
+		.name {
+			width: 30%;
+			padding-left: 40px;
+			@media @tablet-w {
+				width: 25%;
+			}
+			@media @desk-w {
+				width: 30%;
+			}
+		}
+		.desc {
+			width: 25%;
+		}
+		.counter {
+			width: 15%;
+			text-align: center;
+		}
+		.price {
+			width: 10%;
+			text-align: center;
+		}
+		.discount {
+			width: 10%;
+			text-align: center;
+		}
+		.ammount {
+			width: 10%;
+			text-align: center;
+		}
+	}
+	&__body {
+		font-size: 0;
+	}
+	.product {
+		padding: 20px 0;
+		border-bottom: 1px solid #dadada;
+		font-family: 'Helvetica';
+		&>div {
+			display: inline-block;
+			vertical-align: top;
+			font-size: 14px;
+		}
+		&__name {
+			@media @mob-w {
+				margin-bottom: 10px;
+				width: 100%;
+			}
+			@media (min-width: 550px) {
+				width: 50%;
+			}
+			@media @tablet-w {
+				width: 25%;
+			}
+			@media @desk-w {
+				width: 30%;
+			}
+			.clearfix();
+			.img {
+				margin-right: 25px;
+				float: left;
+				@media @tablet-w {
+					float: none;
+				}
+				@media @desk-w {
+					float: left;
+				}
+			}
+			.text {
+				padding-top: 11px;
+				overflow: hidden;
+				.name {
+					margin-bottom: 12px;
+					display: block;
+					color: @red;
+				}
+				.brand-name {
+					color: @gray;
+					opacity: .7;
+					font-family: 'TI';
+				}
+			}
+		}
+		&__desc {
+			padding-top: 11px;
+			width: 25%;
+			@media @mob-w {
+				margin-bottom: 10px;
+				width: 100%;
+			}
+			@media (min-width: 550px) {
+				width: 50%;
+			}
+			@media @tablet-w {
+				width: 25%;
+			}
+			.desc-section {
+				margin-bottom: 20px;
+				font-size: 0;
+				&>div {
+					display: inline-block;
+					vertical-align: top;
+				}
+				.desc-section__name {
+					margin-right: 5%;
+					width: 25%;
+					font-size: 14px;
+					font-weight: bold;
+					@media @tablet-w {
+						margin-bottom: 10px;
+						width: 100%;
+					}
+					@media @desk-w {
+						margin-bottom: 0;
+						width: 25%;
+					}
+				}
+				.desc-section__value {
+					width: 70%;
+					font-size: 14px;
+				}
+			}
+		}
+		&__counter {
+			width: 15%;
+			text-align: center;
+			@media @mob-w {
+				margin-bottom: 10px;
+				width: 100%;
+				text-align: left;
+			}
+			@media (min-width: 550px) {
+				width: 25%;
+			}
+			@media @tablet-w {
+				width: 15%;
+			}
+			.counter {
+				&>* {
+					display: inline-block;
+					vertical-align: top;
+					height: 40px;
+					line-height: 40px;
+				}
+				span {
+					width: 10px;
+					color: @red;
+					cursor: pointer;
+					&.minus {
+						@media @mob-w {
+							width: 20px;
+							text-align: center;
+						}
+						@media @tablet-w {
+							margin-right: 5px;
+							width: 10px;
+							text-align: none;
+						}
+						@media @desk-w {
+							margin-right: 10px;
+						}
+					}
+					&.plus {
+						@media @mob-w {
+							width: 20px;
+							text-align: center;
+						}
+						@media @tablet-w {
+							margin-left: 5px;
+							width: 10px;
+							text-align: none;
+						}
+						@media @desk-w {
+							margin-left: 10px;
+						}
+					}
+				}
+				input[type="text"] {
+					padding: 0 12px;
+					width: 64px;
+					text-align: center;
+				}
+			}
+		}
+		&__price {
+			padding-top: 11px;
+			@media @mob-w {
+				width: 100%;
+				text-align: left;
+			}
+			@media (min-width: 550px) {
+				width: 25%;
+			}
+			@media @tablet-w {
+				width: 10%;
+				text-align: center;
+			}
+		}
+		&__discount {
+			padding-top: 11px;
+			@media @mob-w {
+				width: 100%;
+				text-align: left;
+			}
+			@media (min-width: 550px) {
+				width: 25%;
+			}
+			@media @tablet-w {
+				width: 10%;
+				text-align: center;
+			}
+		}
+		&__ammount {
+			padding-top: 11px;
+			@media @mob-w {
+				width: 100%;
+				text-align: left;
+			}
+			@media (min-width: 550px) {
+				width: 25%;
+			}
+			@media @tablet-w {
+				width: 10%;
+				text-align: center;
+			}
+		}
+	}
+}
+
+.mobile-label {
+	margin-right: 20px;
+	font-size: 16px;
+	min-width: 20%;
+	display: inline-block;
+}
+
+.order-form-footer {
+	padding-bottom: 80px;
+	.clearfix();
+	.form-ammount {
+		@media @mob-w {
+			margin-bottom: 40px;
+			float: none;
+			max-width: 230px;
+		}
+		@media @tablet-w {
+			float: right;
+		}
+	}
+	.form-send {
+		@media @mob-w {
+			float: none;
+		}
+		@media @tablet-w {
+			float: left;
+			max-width: 480px;
+		}
+		@media @desk-w {
+			max-width: 548px;
+		}
+	}
+}
+
+.form-ammount {
+	min-width: 230px;
+	.ammount-section {
+		margin-bottom: 25px;
+		font-size: 0;
+		&:last-child {
+			margin-bottom: 0;
+		}
+		&__name,&__value {
+			display: inline-block;
+			vertical-align: top;
+			width: 50%;
+		}
+		&__name {
+			color: @gray;
+			font-size: 18px;
+			font-family: 'TI';
+			opacity: .7;
+		}
+		&__value {
+			font-size: 16px;
+			font-weight: bold;
+			font-family: 'Helvetica';
+			text-align: right;
+			&.full {
+				font-size: 24px;
+			}
+		}
+	}
+}
+
+.politics {
+	margin-bottom: 30px;
+	color: @gray;
+	font-size: 14px;
+	font-family: 'Helvetica';
+	opacity: .5;
+}

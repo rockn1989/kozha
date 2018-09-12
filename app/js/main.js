@@ -119,7 +119,7 @@ $(function() {
 
 	/*______ Маска формы ______*/
 
-	$('.js__input-phone').mask('+7 999 999-99-99', {clearIfNotMatch: true}).focus(function (e) {
+	$('.js__mask-phone').mask('+7 999 999-99-99', {clearIfNotMatch: true}).focus(function (e) {
 		if (!$(this).val()) {
 			$(this).val('+7 ');
 		}

@@ -1,0 +1,280 @@
+{% extends "layouts/default.html" %}
+{% set title="Оформление заказа" %}
+{% set bread = ["Главная", "Корзина", "Оформление заказа"] %}
+{% set main = false %}
+123
+{% block content %}
+
+<!-- begin content -->
+<section class="content">
+	<div class="uk-container uk-container--medium">
+		<div class="title-h1">Оформление заказа</div>
+		<div class="order">
+			
+			<!-- begin order-form -->
+			<form action="" class="order-form">
+				<fieldset>
+					<div class="order-contacts-info">
+						<div class="order-title">Контактная информация</div>
+						<div class="input-wrapper">
+							<input type="text" name="name" placeholder="ФИО" required><sup>*</sup>
+						</div>
+						<div class="input-wrapper">
+							<input type="text" name="email" placeholder="Email" required><sup>*</sup>
+						</div>
+						<div class="input-wrapper">
+							<input type="text" name="tel" placeholder="Телефон" class="js__mask-phone" required><sup>*</sup>
+						</div>
+						<textarea name="" id="" placeholder="Комментарии"></textarea>
+					</div>
+					<div class="required-fields"><sup>*</sup> Поля обязательные для заполнения</div>
+				</fieldset>
+
+				<fieldset>
+					<div class="order-delivery">
+						<div class="order-title">Доставка</div>
+						<p>
+							Уважаемые гости, обратите внимание! На данный момент не производится доставка по городу и в регионы.
+						</p>
+						<p>
+							Получить и примерить ваш заказ Вы можете в пунктах самовывоза.
+						</p>
+						<div class="radio-wrapper">
+							<label for="pickup" class="custom-element">
+								<input id="pickup" type="radio" name="delivery-type" checked>
+								<span class="custom-radio"></span>
+								<span class="custom-label">Самовывоз <span class="delivery-price-radio">	(Стоимость: 0 руб.)</span></span>
+							</label>
+							<label for="delivery" class="custom-element">
+								<input id="delivery" type="radio" name="delivery-type">
+								<span class="custom-radio"></span>
+								<span class="custom-label">Доставка <span class="delivery-price-radio">	(Стоимость: 0 руб.)</span></span>
+							</label>
+						</div>
+						<div class="radio-content">
+							<div class="radio-pickup">
+								<ul class="list-stores">
+									<li class="store">
+										<label for="address-sokolniki" class="custom-element  " >
+											<input id="address-sokolniki" type="radio" name="address" checked>
+											<span class="custom-radio"></span>
+										</label>
+										<div class="store__subway">
+											<div class="store__subway-icon icon-metro-logo" style="background-color: #ef1f26;"></div>
+											<div class="store__subway-name active js__go-to" data-goto="Владивосток">
+												<p>Сокольники</p>
+												<p>Флагманский магазин</p>
+											</div>
+										</div>
+										<div class="store__address">
+											<p>Москва, Сокольническая пл, д. 4, 2 эт, Меховой салон</p>
+											<p><a href="tel:+74957377277">+7 (495) 737-72-77</a></p>
+										</div>
+										<div class="store__timework">
+											<p>с 10.00 до 22.00</p>
+											<p>(без выходных)</p>
+										</div>
+
+									</li>
+									<li class="store">
+										<label for="address-vdnh" class="custom-element js__go-to" data-goto="Москва, ТРЦ «Вавилон», Проспект Мира, д. 211, Южный проспект, 55">
+											<input id="address-vdnh" type="radio" name="address">
+											<span class="custom-radio"></span>
+										</label>
+										<div class="store__subway">
+											<div class="store__subway-icon icon-metro-logo" style="background-color: #fbaa34;"></div>
+											<div class="store__subway-name">
+												<p>ВДНХ</p>
+											</div>
+										</div>
+										<div class="store__address">
+											<p>Москва, ТРЦ «Вавилон», Проспект Мира, д. 211, Южный проспект, 55</p>
+											<p><a href="tel:+74956651465">+7 (495) 665-14-65</a></p>
+										</div>
+										<div class="store__timework">
+											<p>с 10.00 до 22.00</p>
+											<p>(без выходных)</p>
+										</div>
+									</li>
+									<li class="store">
+										<label for="address-aviapark" class="custom-element js__go-to" data-goto="Москва, ТРЦ Авиапарк 3 этаж. Ходынский бульвар, дом 4">
+											<input id="address-aviapark" type="radio" name="address">
+											<span class="custom-radio"></span>
+										</label>
+										<div class="store__subway">
+											<div class="store__subway-icon icon-metro-logo" style="background-color: #029a54;"></div>
+											<div class="store__subway-name">
+												<p>Аэропорт</p>
+												<p>Динамо</p>
+											</div>
+										</div>
+										<div class="store__address">
+											<p>Москва, ТРЦ Авиапарк 3 этаж. Ходынский бульвар, дом 4</p>
+											<p><a href="tel:+74956444544">+7 (495) 644-45-44</a></p>
+										</div>
+										<div class="store__timework">
+											<p>с 10.00 до 23.00</p>
+											<p>(без выходных)</p>
+										</div>
+									</li>
+								</ul>
+								<div class="order-map">
+									
+									<div id="mapBranch" class="map"></div>
+								</div>
+							</div>
+							<div class="radio-delivery" style="display: none;">
+								<textarea name="" placeholder="Адрес доставки"></textarea>
+							</div>
+						</div>
+					</div>
+				</fieldset>
+				
+				<fieldset>
+					<div class="order-pay">
+						<label for="pay-cart" class="custom-element">
+							<input id="pay-cart" type="radio" name="order-pay" checked>
+							<span class="custom-radio"></span>
+							<span class="custom-label">Оплата картой</span>
+						</label>
+						<label for="pay-cash" class="custom-element">
+							<input id="pay-cash" type="radio" name="order-pay">
+							<span class="custom-radio"></span>
+							<span class="custom-label">Наличными при получении</span>
+						</label>
+					</div>
+				</fieldset>
+ 				
+ 				<fieldset class="no-border">
+ 					<div class="order-title">Состав заказа</div>
+ 					<div class="order-list">
+ 						<div class="order-list__header">
+ 							<div class="name">Наименование</div>
+ 							<div class="desc uk-hidden-small">Описание</div>
+ 							<div class="counter uk-hidden-small">Кол-во</div>
+ 							<div class="price uk-hidden-small">Цена</div>
+ 							<div class="discount uk-hidden-small">Скидка</div>
+ 							<div class="ammount uk-hidden-small">Сумма</div>
+ 						</div>
+ 						<div class="order-list__body">
+ 							<div class="product">
+ 								<div class="product__name">
+ 									<div class="img">
+ 										<a href="">
+ 											<img src="img/order-img-1-120x183.png" alt="">
+ 										</a>
+ 									</div>
+ 									<div class="text">
+ 										<a href="" class="name">Куртка Женская</a>
+ 										<a href="" class="brand-name">Gucci</a>
+ 									</div>
+ 								</div>
+ 								<div class="product__desc">
+ 									<div class="desc-section">
+ 										<div class="desc-section__name">Артикул</div>
+ 										<div class="desc-section__value">W18_T2_335_1748_BLUFIN</div>
+ 									</div>
+ 									<div class="desc-section">
+ 										<div class="desc-section__name">Бренд</div>
+ 										<div class="desc-section__value">RUNO DISCORSO</div>
+ 									</div>
+ 									<div class="desc-section">
+ 										<div class="desc-section__name">Цвет</div>
+ 										<div class="desc-section__value">Красный</div>
+ 									</div>
+ 									<div class="desc-section">
+ 										<div class="desc-section__name">Размер</div>
+ 										<div class="desc-section__value">36/170</div>
+ 									</div>
+ 								</div>
+ 								<div class="product__counter">
+ 									<div class="counter">
+ 										<span class="minus">-</span>
+ 										<input type="text" value="1">
+ 										<span class="plus">+ </span>
+ 									</div>
+ 								</div>
+ 								<div class="product__price"> <span class="mobile-label uk-visible-small">Цена:</span>7 990 р.</div>
+ 								<div class="product__discount"> <span class="mobile-label uk-visible-small">Скидка:</span>300 р.</div>
+ 								<div class="product__ammount"> <span class="mobile-label uk-visible-small">Сумма:</span>7 690 р.</div>
+ 							</div>
+ 							<div class="product">
+ 								<div class="product__name">
+ 									<div class="img">
+ 										<a href="">
+ 											<img src="img/order-img-2-120x183.png" alt="">
+ 										</a>
+ 									</div>
+ 									<div class="text">
+ 										<a href="" class="name">Куртка Женская</a>
+ 										<a href="" class="brand-name">Gucci</a>
+ 									</div>
+ 								</div>
+ 								<div class="product__desc">
+ 									<div class="desc-section">
+ 										<div class="desc-section__name">Артикул</div>
+ 										<div class="desc-section__value">W18_T2_335_1748_BLUFIN</div>
+ 									</div>
+ 									<div class="desc-section">
+ 										<div class="desc-section__name">Бренд</div>
+ 										<div class="desc-section__value">RUNO DISCORSO</div>
+ 									</div>
+ 									<div class="desc-section">
+ 										<div class="desc-section__name">Цвет</div>
+ 										<div class="desc-section__value">Красный</div>
+ 									</div>
+ 									<div class="desc-section">
+ 										<div class="desc-section__name">Размер</div>
+ 										<div class="desc-section__value">36/170</div>
+ 									</div>
+ 								</div>
+ 								<div class="product__counter">
+ 									<div class="counter">
+ 										<span class="minus">-</span>
+ 										<input type="text" value="1">
+ 										<span class="plus">+ </span>
+ 									</div>
+ 								</div>
+ 								<div class="product__price"> <span class="mobile-label uk-visible-small">Цена:</span>7 990 р.</div>
+ 								<div class="product__discount"> <span class="mobile-label uk-visible-small">Скидка:</span>300 р.</div>
+ 								<div class="product__ammount"> <span class="mobile-label uk-visible-small">Сумма:</span>7 690 р.</div>
+ 							</div>
+ 						</div>
+ 					</div>
+ 				</fieldset>
+				
+				<div class="order-form-footer">
+					<div class="form-ammount">
+						<div class="ammount-section">
+							<div class="ammount-section__name">Сумма заказа</div>
+							<div class="ammount-section__value">15 690 р.</div>
+						</div>
+						<div class="ammount-section">
+							<div class="ammount-section__name">Доставка</div>
+							<div class="ammount-section__value">0 р.</div>
+						</div>
+						<div class="ammount-section">
+							<div class="ammount-section__name">Итого</div>
+							<div class="ammount-section__value full">15 690 р.</div>
+						</div>
+					</div>
+					
+					<div class="form-send">
+						<div class="politics">
+							Нажимая «Оформить заказ», вы соглашаетесь на обработку персональных данных в соответствии с Политикой конфиденциальности
+						</div>
+						<div class="btn-wrapper">
+							<button class="btn">Оформить заказ</button>
+						</div>
+					</div>
+				</div>
+
+			</form>
+			<!-- end order-form -->
+
+		</div>
+	</div>
+</section>
+<!-- end content -->
+
+{% endblock %}

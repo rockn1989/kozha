@@ -266,6 +266,110 @@ h2,.title-h2 {
 }
 
 
+/*______ Form Elements ______*/
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+	padding: 0 24px;
+	width: 100%;
+	height: 56px;
+	line-height: 54px;
+	border: 1px solid #dadada;
+	border-radius: 3px;
+}
+
+.input-wrapper {
+	margin-bottom: 20px;
+	position: relative;
+}
+
+textarea {
+	padding: 24px;
+	width: 100%;
+	min-height: 100px;
+	border: 1px solid #dadada;
+	border-radius: 3px;
+	resize: vertical;	
+}
+
+label.error {
+	position: absolute;
+	width: 100%;
+	display: block;
+	color: @red;
+	font-size: 12px;
+}
+
+::placeholder {
+	color: @black;
+	opacity: .75;
+	font-size: 14px;
+	font-family: 'Helvetica';
+}
+
+.custom-element {
+	font-family: 'Helvetica';
+	cursor: pointer;
+	input {
+		display: none;
+		&:checked ~.custom-radio {
+			&:after {
+				background-color: #c4393d;
+			}
+		}
+	}
+	.custom-radio {
+		position: relative;
+		margin-right: 13px;
+		display: inline-block;
+		vertical-align: top;
+		width: 14px;
+		height: 14px;
+		border: 1px solid #dadada;
+		border-radius: 50%;
+		padding: 2px;
+		&:after {
+			content: '';
+			display: block;
+			width: 8px;
+			height: 8px;
+			background-color: transparent;
+			border-radius: 50%;
+		}
+	}
+	.custom-label {
+		margin-top: -2px;
+		display: inline-block;
+		vertical-align: top;
+		font-size: 14px;
+	}
+}
+
+fieldset {
+	margin: 0;
+	padding: 0;
+	border: none; 
+	border-bottom: 1px solid #dadada;
+	@media @mob-w {
+		padding: 30px 0;
+	}
+	@media @tablet-w {
+		padding: 50px 0;
+	}
+	&:last-child {
+		border-bottom: none;
+	}
+}
+
+/*______ Яндекс карта ______*/
+
+.map {
+	width: 100%;
+	min-height: 370px;
+}
+
+
 /*______ Animation ______*/
 
 .uk-animation-up {
