@@ -1,5 +1,3 @@
-'use strict';
-
 $(function () {
 
 	/*______ Валидация формы ______*/
@@ -50,20 +48,21 @@ function init() {
  var myMap = new ymaps.Map('mapBranch', {
    center: [55.7768, 37.5864],
    controls: ['zoomControl'],
-   zoom: 14
+   zoom: 15
  });
 
  function clickGoto() {
-   // Проставляем активный класс
-   $('.js__go-to').removeClass('active');
-   $(this).addClass('active');
+
+   // Переключаем checkbox
+   
+   $(this).find('input').prop('checked', true);
 
    // адрес
    var branch = this.getAttribute('data-goto');
 
    // получение координат по адресу - асинхронная функция
    var myGeocoder = ymaps.geocode(branch);
-
+   console.log(myGeocoder)
    myGeocoder.then(
      function(res) {
        coords = res.geoObjects.get(0).geometry.getCoordinates();
