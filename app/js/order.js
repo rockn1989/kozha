@@ -41,7 +41,10 @@ $(function () {
 
 	/*______ Яндекс карта ______*/
 
-ymaps.ready(init);
+	if($('div').is('#mapBranch')) {
+		ymaps.ready(init);
+	}
+
 
 function init() {
 
@@ -80,8 +83,8 @@ function init() {
        }, {
          iconLayout: 'default#image',
          iconImageHref: '../img/pic-map.png',
-         iconImageSize: [35, 50],
-         iconImageOffset:  [-17, -50]
+         iconImageSize: [27, 32],
+         iconImageOffset:  [0, 0]
        });
        myMap.geoObjects.add(placeMark);
      },

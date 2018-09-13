@@ -117,3 +117,31 @@
 		}
 	}
 }
+
+
+.subscribe-form {
+	padding: 30px 25px 25px;	
+	border: 1px solid #dadada;
+	border-radius: 3px;
+	max-width: 500px;
+	margin: 0 auto;
+	@media @mob-w {
+		text-align: center;
+	}
+	@media @desk-w {
+		text-align: left;
+	}
+	.subscribe-title {
+		margin-bottom: 30px;
+		color: @gray;
+		font-size: 14px;
+		letter-spacing: 1.23px;
+		text-align: center;
+		text-transform: uppercase;
+	}
+	input[type="text"] {
+		height: 40px;
+		line-height: 40px;
+		max-width: 320px;
+	}
+}

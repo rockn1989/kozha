@@ -201,7 +201,6 @@ svg {
 
 h1,
 .title-h1 {
-  margin-bottom: 45px;
   color: #3a3a3a;
   font-size: 36px;
   line-height: 42px;
@@ -209,7 +208,6 @@ h1,
 
 h2,
 .title-h2 {
-  margin-bottom: 45px;
   color: #3a3a3a;
   font-size: 24px;
   line-height: 26px;
@@ -443,6 +441,20 @@ h2,
   border: none !important;
 }
 
+.icon-triangle-left:before {
+  content: "";
+  display: inline-block;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-left: 4px solid #202f43;
+  -webkit-transition: -webkit-transform .3s ease;
+  transition: -webkit-transform .3s ease;
+  -o-transition: transform .3s ease;
+  -moz-transition: transform .3s ease, -moz-transform .3s ease;
+  transition: transform .3s ease;
+  transition: transform .3s ease, -webkit-transform .3s ease, -moz-transform .3s ease;
+}
+
 .uk-slidenav-previous,
 .uk-slidenav-next {
   position: absolute;
@@ -505,11 +517,12 @@ h2,
 
 .lazy {
   min-height: 200px;
+  width: 100%;
   background-image: url("../img/tail-spin.svg");
   background-repeat: no-repeat;
   -webkit-background-size: 30px 30px;
   background-size: 30px 30px;
-  background-position: 50% 50%;
+  background-position: center center;
 }
 
 /*______ Form Elements ______*/
@@ -1517,6 +1530,137 @@ fieldset:last-child {
   text-transform: uppercase;
   letter-spacing: 1.23px;
   text-align: center;
+}
+
+/*______ Stocks ______*/
+
+.stock-list .item {
+  margin-bottom: 50px;
+}
+
+.stock-list .item:last-child {
+  margin-bottom: 0;
+}
+
+.content-inner {
+  padding-bottom: 40px;
+}
+
+/*______ Navbar Left ______*/
+
+.navbar-left {
+  padding-top: 10px;
+  padding-right: 20px;
+}
+
+.navbar-left__inner {
+  padding: 10px 15px;
+  border: 1px solid #dedede;
+}
+
+.navbar-left .navbar-title {
+  position: relative;
+  margin-bottom: 40px;
+  color: #3a3a3a;
+  font-size: 24px;
+  line-height: 26px;
+  font-family: "FuturaFuturisC" !important;
+}
+
+.navbar-left .navbar-title.open:before {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.navbar-left .navbar-sublist {
+  padding: 15px 0 0 15px;
+  display: none;
+  list-style: none;
+}
+
+.navbar-left .navbar-sublist li {
+  padding-bottom: 20px;
+}
+
+.navbar-left .navbar-sublist li:last-child {
+  padding-bottom: 0;
+}
+
+.navbar-left a.navbar-toggle {
+  position: relative;
+}
+
+.navbar-left a.navbar-toggle i {
+  text-align: center;
+  -webkit-transform-origin: center center;
+  -moz-transform-origin: center center;
+  -ms-transform-origin: center center;
+  transform-origin: center center;
+}
+
+.navbar-left a.navbar-toggle:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 0;
+  height: 1px;
+  background-color: #5d3131;
+  -webkit-transition: width .3s ease;
+  -o-transition: width .3s ease;
+  -moz-transition: width .3s ease;
+  transition: width .3s ease;
+}
+
+.navbar-left a.navbar-toggle.active:after {
+  width: 100%;
+}
+
+.navbar-left a.navbar-toggle.active i {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.navbar-left a.navbar-toggle:hover {
+  text-decoration: none;
+}
+
+.navbar-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navbar-list > li {
+  margin-bottom: 20px;
+}
+
+.navbar-list > li a {
+  position: relative;
+  padding-right: 20px;
+  display: block;
+  color: #5d3131;
+  font-size: 13px;
+  font-family: 'Helvetica';
+}
+
+.navbar-list > li a i {
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top: 1px;
+  right: -7px;
+  -webkit-transition: -webkit-transform .3s ease;
+  transition: -webkit-transform .3s ease;
+  -o-transition: transform .3s ease;
+  -moz-transition: transform .3s ease, -moz-transform .3s ease;
+  transition: transform .3s ease;
+  transition: transform .3s ease, -webkit-transform .3s ease, -moz-transform .3s ease;
 }
 
 /*______ Каталог ______*/
@@ -2730,9 +2874,17 @@ fieldset:last-child {
   font-size: 14px;
 }
 
+.order-list .product__desc .desc-section .desc-section__value a {
+  color: #3a3a3a;
+}
+
 .order-list .product__counter {
   width: 15%;
   text-align: center;
+}
+
+.order-list .product__counter .counter {
+  font-size: 0;
 }
 
 .order-list .product__counter .counter > * {
@@ -2746,12 +2898,14 @@ fieldset:last-child {
   width: 10px;
   color: #5d3131;
   cursor: pointer;
+  font-size: 14px;
 }
 
 .order-list .product__counter .counter input[type="text"] {
   padding: 0 12px;
   width: 64px;
   text-align: center;
+  outline: none;
 }
 
 .order-list .product__price {
@@ -3456,9 +3610,43 @@ fieldset:last-child {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.subscribe-form {
+  padding: 30px 25px 25px;
+  border: 1px solid #dadada;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.subscribe-form .subscribe-title {
+  margin-bottom: 30px;
+  color: #3a3a3a;
+  font-size: 14px;
+  letter-spacing: 1.23px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.subscribe-form input[type="text"] {
+  height: 40px;
+  line-height: 40px;
+  max-width: 320px;
+}
+
 @media (min-width: 0) {
   .uk-container {
     padding: 0 10px;
+  }
+
+  h1,
+  .title-h1 {
+    margin-bottom: 30px;
+  }
+
+  h2,
+  .title-h2 {
+    margin-bottom: 30px;
   }
 
   .promo-card {
@@ -3491,6 +3679,31 @@ fieldset:last-child {
 
   .main-page-news .news-preview__text {
     padding: 0 10px;
+  }
+
+  .content-inner {
+    padding-top: 40px;
+  }
+
+  .navbar-left {
+    padding-right: 0;
+  }
+
+  .navbar-left .navbar-title {
+    margin-bottom: 0;
+  }
+
+  .navbar-left .navbar-title:before {
+    position: absolute;
+    top: 12px;
+    right: 0;
+    font-family: 'icomoon' !important;
+  }
+
+  .navbar-list {
+    padding-top: 30px;
+    margin-bottom: 0;
+    display: none;
   }
 
   .catalog-body .card {
@@ -3594,14 +3807,24 @@ fieldset:last-child {
     text-align: left;
   }
 
+  .order-list .product__counter .counter span {
+    border: 1px solid #d3d3d3;
+  }
+
   .order-list .product__counter .counter span.minus {
     width: 20px;
     text-align: center;
+    border-right: none;
+    -webkit-border-radius: 3px 0 0 3px;
+    border-radius: 3px 0 0 3px;
   }
 
   .order-list .product__counter .counter span.plus {
     width: 20px;
     text-align: center;
+    border-left: none;
+    -webkit-border-radius: 0 3px 3px 0;
+    border-radius: 0 3px 3px 0;
   }
 
   .order-list .product__price {
@@ -3732,6 +3955,10 @@ fieldset:last-child {
     -ms-transform: translate(0, 50%) rotate(-90deg);
     transform: translate(0, 50%) rotate(-90deg);
   }
+
+  .subscribe-form {
+    text-align: center;
+  }
 }
 
 @media (min-width: 425px) {
@@ -3785,6 +4012,16 @@ fieldset:last-child {
 @media (min-width: 768px) {
   .uk-container {
     padding: 0 25px;
+  }
+
+  h1,
+  .title-h1 {
+    margin-bottom: 45px;
+  }
+
+  h2,
+  .title-h2 {
+    margin-bottom: 45px;
   }
 
   fieldset {
@@ -3902,6 +4139,10 @@ fieldset:last-child {
     width: 15%;
   }
 
+  .order-list .product__counter .counter span {
+    border: none;
+  }
+
   .order-list .product__counter .counter span.minus {
     margin-right: 5px;
     width: 10px;
@@ -3998,6 +4239,29 @@ fieldset:last-child {
     object-fit: none;
     width: auto;
     height: auto;
+  }
+
+  .content-inner {
+    padding-top: 0;
+  }
+
+  .navbar-left__inner {
+    padding: 0;
+    border: none;
+  }
+
+  .navbar-left .navbar-title {
+    margin-bottom: 40px;
+  }
+
+  .navbar-left .navbar-title:before {
+    display: none;
+  }
+
+  .navbar-list {
+    margin-bottom: 50px;
+    padding-top: 0;
+    display: block !important;
   }
 
   .catalog-body .card {
@@ -4124,6 +4388,10 @@ fieldset:last-child {
 
   .main-search.open input {
     opacity: 1;
+  }
+
+  .subscribe-form {
+    text-align: left;
   }
 }
 

@@ -1,0 +1,78 @@
+{% extends "layouts/default.html" %}
+{% set title="Акции" %}
+{% set bread = ["Главная", "Покупателю", "Акции"] %}
+{% set main = false %}
+{% block content %}
+
+<!-- begin content -->
+<section class="content">
+	<div class="uk-container">
+		<div class="uk-grid">
+			<div class="uk-width-1-1 uk-width-large-1-4">
+				<div class="navbar-left">
+					<div class="navbar-left__inner">
+						<div class="navbar-title icon-triangle-left">Покупателю</div>
+						<ul class="navbar-list">
+							<li><a href="">О компании</a></li>
+							<li>
+								<a href="" class="navbar-toggle js__toggle-navbar">Покупателю <i class="icon-triangle-left"></i></a>
+								<ul class="navbar-sublist">
+									<li><a href="#">Акции</a></li>
+									<li><a href="#">Программы лояльности</a></li>
+									<li><a href="#">Гарантия</a></li>
+									<li><a href="#">Возврат</a></li>
+									<li><a href="#">Доставка</a></li>
+									<li><a href="#">Оплата</a></li>
+									<li><a href="#">Подарочные карты</a></li>
+								</ul>
+							</li>
+							<li><a href="">Услуги</a></li>
+							<li><a href="">Интернет-магазин</a></li>
+						</ul>
+					</div>
+					<form action="" class="subscribe-form uk-visible-large">
+						<div class="subscribe-title">Подписка на акции</div>
+						<div class="input-wrapper">
+							<input type="text" name="email" placeholder="Введите email" required>
+						</div>
+						<button class="btn" type="submit">Подписаться</button>
+					</form>
+				</div>
+			</div>
+			<div class="uk-width-1-1 uk-width-large-3-4">
+				<div class="content-inner">
+					<div class="title-h1">Акции</div>
+					<div class="stock-list">
+						<div class="item lazy uk-invisible" data-uk-scrollspy="{cls:'uk-animation-up lazy uk-invisible'}">
+							<a href="">
+								<img data-src="img/stocks-img-1.png" class="lazy" alt="">
+							</a>
+						</div>
+						<div class="item uk-invisible" data-uk-scrollspy="{cls:'uk-animation-up uk-invisible'}">
+							<a href="">
+								<img data-src="img/stocks-img-2.png" class="lazy" alt="">
+							</a>
+						</div>
+						<div class="item uk-invisible" data-uk-scrollspy="{cls:'uk-animation-up uk-invisible'}">
+							<a href="">
+								<img data-src="img/stocks-img-3.png" class="lazy" alt="">
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="uk-width-1-1">
+				<form action="" class="subscribe-form uk-hidden-large uk-margin-large-bottom">
+					<div class="subscribe-title">Подписка на акции</div>
+					<div class="input-wrapper">
+						<input type="text" name="email" placeholder="Введите email" required>
+					</div>
+					<button class="btn" type="submit">Подписаться</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- end content -->
+
+{% endblock %}

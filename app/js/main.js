@@ -128,9 +128,9 @@ $(function() {
 
 	/*______ Валидация формы ______*/
 
-	if($('form').is('.default-form')) {
+	if($('form').is('.subscribe-form')) {
 
-		$('.default-form').validate({
+		$('.subscribe-form').validate({
 			rules: {
 				email: {
 					required: true,
@@ -142,6 +142,33 @@ $(function() {
 			},
 		});
 	};
+
+	/*______ Левый сайдбар ______*/
+
+	$('.js__toggle-navbar').on('click', 'i', function (e) {
+		e.preventDefault();
+		var _self = $(this),
+			$parent = $(this).closest('li');
+
+			$parent.find('ul').stop(true, true).slideToggle('350');
+			$parent.find('a').toggleClass('active');
+
+	});
+
+	/*______ Левый сайдбар адаптация ______*/
+
+	$('.navbar-title').on('click', function (e) {
+		e.preventDefault();
+		if($(window).outerWidth() >= 960) {
+			return false;
+		} 
+		var _self = $(this),
+			$parent = $(this).closest('div.navbar-left__inner');
+			console.log(_self);
+			$parent.find('ul.navbar-list').stop(true, true).slideToggle('350');
+			_self.toggleClass('open');
+
+	});
 
 
 	/*______ Открытие мобильного подменю ______*/
@@ -170,12 +197,12 @@ $(function() {
 
 	/*______ Отключение UIKIT анимации для мобильных устройств ______*/
 
-	UIkit.on('beforeready.uk.dom', function () {
+/*	UIkit.on('beforeready.uk.dom', function () {
 		if (UIkit.$win.width() < 767 && $('html').hasClass('uk-touch')) {
 			UIkit.$('[data-uk-scrollspy]').removeAttr('data-uk-scrollspy');
 		};
 	});
-
+*/
 
 	/*______ Полифил для Object-fit ______*/
 	
