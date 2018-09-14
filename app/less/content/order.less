@@ -171,6 +171,7 @@
 		font-size: 0;
 	}
 	.product {
+		position: relative;
 		padding: 20px 0;
 		border-bottom: 1px solid #dadada;
 		font-family: 'Helvetica';
@@ -271,10 +272,13 @@
 				text-align: left;
 			}
 			@media (min-width: 550px) {
-				width: 25%;
+		    width: 100%;
+		    padding-left: 50%;
 			}
 			@media @tablet-w {
+				padding-left: 0;
 				width: 15%;
+				text-align: center;
 			}
 			.counter {
 				font-size: 0;
@@ -289,6 +293,7 @@
 					color: @red;
 					cursor: pointer;
 					font-size: 14px;
+					user-select: none;
 					@media @mob-w {
 						border: 1px solid #d3d3d3;
 					}
@@ -305,7 +310,7 @@
 						@media @tablet-w {
 							margin-right: 5px;
 							width: 10px;
-							text-align: none;
+							text-align: unset;
 						}
 						@media @desk-w {
 							margin-right: 10px;
@@ -343,23 +348,28 @@
 				text-align: left;
 			}
 			@media (min-width: 550px) {
-				width: 25%;
+		    padding-left: 50%;
+		    width: 100%;
 			}
 			@media @tablet-w {
+				padding-left: 0;
 				width: 10%;
 				text-align: center;
 			}
 		}
 		&__discount {
 			padding-top: 11px;
+			color: #c4393d;
 			@media @mob-w {
 				width: 100%;
 				text-align: left;
 			}
 			@media (min-width: 550px) {
-				width: 25%;
+		    padding-left: 50%;
+		    width: 100%;
 			}
 			@media @tablet-w {
+				padding-left: 0;
 				width: 10%;
 				text-align: center;
 			}
@@ -371,11 +381,38 @@
 				text-align: left;
 			}
 			@media (min-width: 550px) {
-				width: 25%;
+		    padding-left: 50%;
+		    width: 100%;
 			}
 			@media @tablet-w {
+				padding-left: 0;
 				width: 10%;
 				text-align: center;
+			}
+		}
+		&__delete {
+			position: absolute;
+			bottom: 20px;
+			right: 35px;
+			font-size: 14px;
+			color: @black;
+			border-bottom: 1px dashed @black;
+			cursor: pointer;
+			transition: all .3s ease;
+			&:hover {
+				color: #c4393d;
+				border-bottom-color: #c4393d;
+				text-decoration: none;
+			}
+			span {
+				margin-right: 5px;
+			}
+			@media (min-width: 550px) {
+				right: 10px;
+				bottom: 20px;
+			}
+			@media @tablet-w {
+				right: 25px;
 			}
 		}
 	}
@@ -395,10 +432,14 @@
 		@media @mob-w {
 			margin-bottom: 40px;
 			float: none;
-			max-width: 230px;
+			max-width: 280px;
+			width: 100%;
 		}
 		@media @tablet-w {
 			float: right;
+		}
+		@media @desk-w {
+			margin-right: 30px;
 		}
 	}
 	.form-send {
@@ -407,7 +448,7 @@
 		}
 		@media @tablet-w {
 			float: left;
-			max-width: 480px;
+			max-width: 420px;
 		}
 		@media @desk-w {
 			max-width: 548px;

@@ -143,6 +143,18 @@ $(function() {
 		});
 	};
 
+
+
+		$('.feedback-form').validate({
+			messages: {
+				["feedback-name"]: "Обязательноe поле",
+				["feedback-email"]: "Обязательноe поле",
+				["feedback-tel"]: "Обязательноe поле",
+			},
+		});
+
+
+
 	/*______ Левый сайдбар ______*/
 
 	$('.js__toggle-navbar').on('click', 'i', function (e) {

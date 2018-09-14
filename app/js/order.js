@@ -39,6 +39,24 @@ $(function () {
 	});
 
 
+	/*______ Изменение кол-во товаров ______*/
+
+	$('.counter').on('click', 'span', function (e) {
+		e.preventDefault();
+
+		var input = $(this).closest('.counter').find('input');
+
+		if($(this).hasClass('minus')) {
+			input.val() == 1 ? input.val(1) : input.val(parseInt(input.val(),10) - 1);			
+		};
+
+		if($(this).hasClass('plus')) {
+			input.val(parseInt(input.val(),10) + 1);
+		};
+
+	});
+
+
 	/*______ Яндекс карта ______*/
 
 	if($('div').is('#mapBranch')) {
@@ -65,7 +83,7 @@ function init() {
 
    // получение координат по адресу - асинхронная функция
    var myGeocoder = ymaps.geocode(branch);
-   console.log(myGeocoder)
+
    myGeocoder.then(
      function(res) {
        coords = res.geoObjects.get(0).geometry.getCoordinates();

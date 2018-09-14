@@ -1,3 +1,69 @@
 {% block content %}
 
+<!-- begin feedback-modal-->
+<div id="feedback-modal" class="uk-modal feedback-modal default-modal">
+	<div class="uk-modal-dialog">
+		<div class="uk-modal-header">
+			<div class="title">Обратная связь</div>
+			<a class="uk-modal-close icon-close"></a>
+		</div>
+		<div class="uk-modal-body">
+			<form action="" class="default-form feedback-form">
+				<div class="input-wrapper">
+					<input type="text" id="feedback-name" name="feedback-name" placeholder="ФИО*" required>
+				</div>
+				<div class="input-wrapper">
+					<input type="email" id="feedback-email" name="feedback-email" placeholder="Email*" required>
+				</div>
+				<div class="input-wrapper">
+					<input type="text" id="feedback-tel" class="js__mask-phone" name="feedback-tel" placeholder="Телефон*" required>
+				</div>
+				<div class="input-wrapper">
+					<input type="text" id="feedback-city" name="feedback-city" placeholder="Ваш город">
+				</div>
+				<div>
+					<textarea name="message" id="feedback-message" name="feedback-message" placeholder="Комментарий"></textarea>
+					<div class="required-fileds">
+						<sup>*</sup> — поля обязательные для заполнения
+					</div>
+				</div>
+
+				<button type="submit" class="btn modal-btn">Отправить</button>
+				<div class="form-politics">
+					Нажимая на кнопку отправить, я даю согласие на обработку <a href="">Персональных данных</a>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+<!-- end  feedback-modal -->
+
+<!-- begin login-modal -->
+<div id="login-modal" class="uk-modal login-modal default-modal">
+	<div class="uk-modal-dialog">
+		<div class="uk-modal-header">
+			<div class="title">Вход на сайт</div>
+			<a class="uk-modal-close icon-close"></a>
+		</div>
+		<div class="uk-modal-body">
+			<form action="" class="default-form login-form">
+				<div class="input-wrapper">
+					<input type="text" id="login-name" name="login-name" placeholder="Логин" required>
+				</div>
+				<div class="input-wrapper">
+					<input type="password" id="login-email" name="login-email" placeholder="Пароль" required>
+				</div>
+				<button type="submit" class="btn modal-btn">Войти</button>
+
+				
+				<div class="form-politics">
+					<a href="/login/?forgot_password=yes" class="uk-float-left">Забыли пароль?</a>
+					<a href="/login/register.php" class="uk-float-right">Зарегистрироваться</a>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+<!-- end login-modal -->
+
 {% endblock %}

@@ -1,1 +1,66 @@
 /*______ MODALS WINDOWS ______*/
+
+.default-modal {
+	.uk-modal-header {
+		margin-bottom: 30px;
+		padding-top: 25px;
+		position: relative;
+	}
+	.uk-modal-close {
+		position: absolute;
+		top: 5px;
+		right: 5px;
+		font-size: 20px;
+		color: @black;
+		&:hover {
+			color: @red;
+			text-decoration: none;
+		}
+	}
+	.title {
+		font-size: 24px;
+	}
+	textarea {
+		margin-top: 30px;
+		margin-bottom: 5px;
+	}
+	.input-wrapper {
+		@media @mob-w {
+			margin-bottom: 30px;
+		}
+		@media @desk-w {
+			margin-bottom: 20px;
+		}
+	}
+	.required-fileds,
+	.form-politics {
+		margin: 15px 0;
+	}
+	input {
+		&:after {
+			content: '*';
+		}
+	}
+	sup {
+		top: 0;
+		font-size: 24px;
+ 		color: #c4393d;
+	}
+	.form-politics {
+		.clearfix();
+		a {
+			color: #c4393d;
+			border-bottom: 1px dashed #c4393d;
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+
+.login-modal {
+	.uk-modal-dialog {
+		width: 350px;
+	}
+}
