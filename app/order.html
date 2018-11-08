@@ -66,7 +66,7 @@
 
 			<div class="header-desc__logo">
 				<a href="/" class="logo">
-					<img src="img/logo.png" alt="">
+					<img src="img/logo-2.png" alt="">
 					<span class="logo__subtitle">SINCE 1997</span>
 				</a>
 			</div>
@@ -237,8 +237,8 @@
 					<a href="/" class="mobile-logo">
 						<picture>
 							<source media="(max-width: 767px)" srcset="img/small-logo.png">
-							<source media="(min-width: 768px)" srcset="img/logo.png">
-								<img src="logo.png" alt="">
+							<source media="(min-width: 768px)" srcset="img/logo-2.png">
+								<img src="logo-2.png" alt="">
 						</picture>
 					</a>
 				</div>
@@ -390,7 +390,8 @@
 
 				<fieldset>
 					<div class="order-delivery">
-						<div class="order-title">Доставка</div>
+						<!-- <div class="order-title">Доставка</div> -->
+						<div class="order-title">Пункты самовывоза</div>
 						<p>
 							Уважаемые гости, обратите внимание! На данный момент не производится доставка по городу и в регионы.
 						</p>
@@ -403,11 +404,11 @@
 								<span class="custom-radio"></span>
 								<span class="custom-label">Самовывоз <span class="delivery-price-radio">	(Стоимость: 0 руб.)</span></span>
 							</label>
-							<label for="delivery" class="custom-element">
-								<input id="delivery" type="radio" name="delivery-type">
-								<span class="custom-radio"></span>
-								<span class="custom-label">Доставка <span class="delivery-price-radio">	(Стоимость: 0 руб.)</span></span>
-							</label>
+<!-- 							<label for="delivery" class="custom-element">
+	<input id="delivery" type="radio" name="delivery-type">
+	<span class="custom-radio"></span>
+	<span class="custom-label">Доставка <span class="delivery-price-radio">	(Стоимость: 0 руб.)</span></span>
+</label> -->
 						</div>
 						<div class="radio-content">
 							<div class="radio-pickup">
@@ -489,17 +490,83 @@
 				</fieldset>
 				
 				<fieldset>
-					<div class="order-pay">
-						<label for="pay-cart" class="custom-element">
-							<input id="pay-cart" type="radio" name="order-pay" checked>
-							<span class="custom-radio"></span>
-							<span class="custom-label">Оплата картой</span>
-						</label>
-						<label for="pay-cash" class="custom-element">
-							<input id="pay-cash" type="radio" name="order-pay">
-							<span class="custom-radio"></span>
-							<span class="custom-label">Наличными при получении</span>
-						</label>
+					<div class="order-title">Выберите удобный день и время для самовывоза</div>
+<!-- 					<div class="order-pay">
+	<label for="pay-cart" class="custom-element">
+		<input id="pay-cart" type="radio" name="order-pay" checked>
+		<span class="custom-radio"></span>
+		<span class="custom-label">Оплата картой</span>
+	</label>
+	<label for="pay-cash" class="custom-element">
+		<input id="pay-cash" type="radio" name="order-pay">
+		<span class="custom-radio"></span>
+		<span class="custom-label">Наличными при получении</span>
+	</label>
+</div> -->
+					<div class="uk-grid">
+						<div class="uk-width-1-1 uk-width-medium-1-4">
+							<div class="order-day">
+								<label for="pay-day-1" class="custom-element">
+									<input id="pay-day-1" type="radio" name="order-day" checked>
+									<span class="custom-radio"></span>
+									<span class="custom-label">Понедельник</span>
+								</label>
+								<label for="pay-day-2" class="custom-element">
+									<input id="pay-day-2" type="radio" name="order-day">
+									<span class="custom-radio"></span>
+									<span class="custom-label">Вторник</span>
+								</label>
+								<label for="pay-day-3" class="custom-element">
+									<input id="pay-day-3" type="radio" name="order-day">
+									<span class="custom-radio"></span>
+									<span class="custom-label">Среда</span>
+								</label>
+								<label for="pay-day-4" class="custom-element">
+									<input id="pay-day-4" type="radio" name="order-day">
+									<span class="custom-radio"></span>
+									<span class="custom-label">Четверг</span>
+								</label>
+								<label for="pay-day-5" class="custom-element">
+									<input id="pay-day-5" type="radio" name="order-pay">
+									<span class="custom-radio"></span>
+									<span class="custom-label">Пятница</span>
+								</label>
+								<label for="pay-day-6" class="custom-element">
+									<input id="pay-day-6" type="radio" name="order-day">
+									<span class="custom-radio"></span>
+									<span class="custom-label">Суббота</span>
+								</label>
+								<label for="pay-day-7" class="custom-element">
+									<input id="pay-day-7" type="radio" name="order-day">
+									<span class="custom-radio"></span>
+									<span class="custom-label">Воскресенье</span>
+								</label>
+							</div>
+						</div>
+						<div class="uk-width-1-1 uk-width-medium-1-4">
+							<div class="order-time">
+								<label for="pay-time-1" class="custom-element">
+									<input id="pay-time-1" type="radio" name="order-time" checked>
+									<span class="custom-radio"></span>
+									<span class="custom-label">10:00-13:00</span>
+								</label>
+								<label for="pay-time-2" class="custom-element">
+									<input id="pay-time-2" type="radio" name="order-time">
+									<span class="custom-radio"></span>
+									<span class="custom-label">13:00-16:00</span>
+								</label>
+								<label for="pay-time-3" class="custom-element">
+									<input id="pay-time-3" type="radio" name="order-time">
+									<span class="custom-radio"></span>
+									<span class="custom-label">16:00-19:00</span>
+								</label>
+								<label for="pay-time-4" class="custom-element">
+									<input id="pay-time-4" type="radio" name="order-time">
+									<span class="custom-radio"></span>
+									<span class="custom-label">19:00-22:00</span>
+								</label>
+							</div>
+						</div>
 					</div>
 				</fieldset>
  				

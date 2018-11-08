@@ -63,13 +63,14 @@
 	}
 	&__product-name {
 		margin-bottom: 10px;
-		width: 65%;
+		width: 60%;
 		a {
 		position: relative;
 		display: inline-block;
-		font-size: 18px;
+		font-size: 16px;
 		line-height: 21px;
-		color: @red;
+		color: #000000;
+		font-family: @helv;
 			&:hover {
 				text-decoration: underline;
 			}
@@ -79,21 +80,23 @@
 		a {
 			font-size: 16px;
 			font-family: 'TI';
-			color: @gray;
+			color: #000000;
 		}
 	}
 	&__product-price {
-		min-width: 30%;
-		color: @gray;
+		min-width: 35%;
+		color: #000000;
 		text-align: right;
-		font-size: 16px;
+		font-size: 14px;
 		line-height: 21px;
 		font-weight: bold;
 		.current-price {
+			font-size: 16px;
 		}
 		.old-price {
 			position: relative;
 			display: inline-block;
+			color: rgba(0, 0, 0, .8);
 			&:after {
 				content: '';
 				position: absolute;
@@ -101,7 +104,8 @@
 				left: 0;
 				width: 100%;
 				height: 1px;
-				background-color: #c4393d;
+				background-color: darken(#FF0300, 5%);
+
 			}
 			&:empty {
 				display: none;
@@ -175,7 +179,7 @@
 
 .card-colors-list {
 	margin: 0;
-	padding: 0;
+	padding: 0 !important;
 	list-style: none;
 	li {
 		margin-bottom: 10px;
@@ -203,7 +207,6 @@
 		padding: 0;
 		display: flex;
 		flex-wrap: wrap;
-		justify-content: space-between;
 		width: 100%;
 		list-style: none;
 		font-size: 0;
@@ -265,6 +268,12 @@
 	transition: bottom 0.3s ease-out;
 	z-index: 76;
 	background: rgba(38, 52, 69, 0.5);
+	@media @mob-w {
+		display: none;
+	}
+	@media @desk-w {
+		display: block;
+	}
 	.preview {
     font-size: 12px;
     font-weight: 700;

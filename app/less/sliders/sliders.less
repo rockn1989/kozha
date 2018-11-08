@@ -146,6 +146,22 @@
 	margin-bottom: 30px;
 	.slider {
 		padding: 0 25px;
+		a {
+			position: relative;
+			display: block;
+			height: 130px;
+			text-align: center;
+			img {
+				max-height: 100%;
+				display: inline;
+			}
+			&:after {
+				content: '';
+				display: inline-block;
+				vertical-align: middle;
+				height: 100%;
+			}
+		}
 	}
 	.slick-prev,
 	.slick-next {

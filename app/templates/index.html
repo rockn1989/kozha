@@ -1,12 +1,13 @@
 {% extends "layouts/default.html" %}
 {% set title="Главная" %}
 {% set products =[
-	{name: "Куртка женская", stocks: {new:"Новинка"}, brand: "Gucci", price: "7 990р.", oldprice: ""},
-	{name: "Жилет из соболя с отделкой из свакары по бокам", stocks: {discount:"-20%"}, brand: "Avanti", price: "731 493 р.", oldprice: "965 493 р. "},
-	{name: "Норковая Шуба", brand: "Елена Фурс", price: "124 990 р.", oldprice: ""},
-	{name: "Куртка женская", brand: "Gucci", price: "7 990р.", oldprice: ""} 
+	{name: "Куртка женская", stocks: {new:"Новинка"}, brand: "Gucci", price: "7 990руб.", oldprice: ""},
+	{name: "Жилет из соболя с отделкой из свакары по бокам", stocks: {discount:"-20%"}, brand: "Avanti", price: "731 493 руб.", oldprice: "965 493 руб. "},
+	{name: "Норковая Шуба", brand: "Елена Фурс", price: "124 990 руб.", oldprice: ""},
+	{name: "Куртка женская", brand: "Gucci", price: "7 990руб.", oldprice: ""} 
 ] %}
 {% block content %}
+
 	<!-- begin main-slider -->
 	<div class="main-slider preload">
 		<div class="uk-container">
@@ -37,10 +38,10 @@
 									<img src="img/promo-logo.png" alt="">
 								</div>
 								<div class="promo-card__text">
-									Скидка 5% клиентам интернета магазина
+									Скидка <span style="color: #e60300;">5%</span> клиентам интернет магазина
 								</div>
 								<div class="promo-card__btn">
-									<a href="" class="btn">Подробнее</a>
+									<a href="" class="btn btn--small">Подробнее</a>
 								</div>
 								<div class="promo-card__subtitle">
 									Срок акции уточняйте у консультантов
@@ -78,10 +79,11 @@
 													</div>
 													<div class="card-sizes-wrapper">
 														<ul class="sizes-list">
+															<li><a href="#" class="disabled">36/170</a></li>
 															<li><a href="#">36/170</a></li>
+															<li><a href="#" class="disabled">36/170</a></li>
 															<li><a href="#">36/170</a></li>
-															<li><a href="#">36/170</a></li>
-															<li><a href="#">36/170</a></li>
+															<!-- <li class="not-available">Нет в наличии</li> -->
 														</ul>
 													</div>
 													<div class="card-preview">
@@ -100,7 +102,7 @@
 												<div class="card__product-brand"><a href="">{{product.brand}}</a></div>
 												<div class="card__offer">
 													<a href="">
-														<span class="card__offer-text">В рассрочку</span> от <span class="card__offer-value">491 р.</span>
+														<span class="card__offer-text">В рассрочку</span> от <span class="card__offer-value">491 руб.</span>
 													</a>
 												</div>
 											</div>
@@ -151,10 +153,10 @@
 								<img src="img/promo-logo.png" alt="">
 							</div>
 							<div class="promo-card__text">
-								Скидка 5% клиентам интернета магазина
+								Скидка <span style="color: #e60300;">5%</span> клиентам интернета магазина
 							</div>
 							<div class="promo-card__btn">
-								<a href="" class="btn">Подробнее</a>
+								<a href="" class="btn btn--small">Подробнее</a>
 							</div>
 						</div>
 					</div>

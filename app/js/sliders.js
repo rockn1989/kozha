@@ -16,7 +16,15 @@ $(function () {
 		slidesToScroll: 1,
 		lazyLoad: 'progressive',
 		prevArrow: $(this).find('.slide-prev'),
-		nextArrow: $(this).find('.slide-next')
+		nextArrow: $(this).find('.slide-next'),
+		responsive: [
+			{
+				breakpoint: 960,
+				settings: {
+					dots: false,
+				}
+			}
+		]
 	});
 
 
@@ -121,7 +129,7 @@ $(function () {
 		nextArrow: '<div class="btn-slide slick-next"><i class="icon-arrow-right"></i></div>',
 		responsive: [
 			{
-				breakpoint: 960,
+				breakpoint: 1260,
 				settings: {
 					slidesToShow: 6,
 					slidesToScroll: 1,
@@ -129,16 +137,24 @@ $(function () {
 				}
 			},
 			{
-				breakpoint: 768,
+				breakpoint: 960,
 				settings: {
 					slidesToShow: 4,
+					slidesToScroll: 1,
+					infinite: true,
+				}
+			},
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 3,
 					slidesToScroll: 1
 				}
 			},
 			{
 				breakpoint: 480,
 				settings: {
-					slidesToShow: 2,
+					slidesToShow: 1,
 					slidesToScroll: 1
 				}
 			}

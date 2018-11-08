@@ -20,7 +20,7 @@
 		display: inline-block;
 		width: 1%;
 		font-size: 24px;
-		color: #c4393d;
+		color: #523b29;
 	}
 	@media @desk-w {
 		max-width: 50%;
@@ -34,7 +34,7 @@
 	sup {
 		top: 0;
 		font-size: 24px;
-		color: #c4393d;
+		color: #523b29;
 	}
 }
 
@@ -257,6 +257,7 @@
 				.desc-section__value {
 					width: 70%;
 					font-size: 14px;
+					word-break: break-word;
 					a {
 						color: @gray;
 					}
@@ -300,6 +301,10 @@
 					@media @tablet-w {
 						border: none;
 					}
+					&.mobile-label {
+						color: #000000;
+						font-size: 16px;
+					}
 					&.minus {
 						@media @mob-w {
 							width: 20px;
@@ -338,6 +343,7 @@
 					width: 64px;
 					text-align: center;
 					outline: none;
+					font-size: 13px;
 				}
 			}
 		}
@@ -359,7 +365,8 @@
 		}
 		&__discount {
 			padding-top: 11px;
-			color: #c4393d;
+			//color: #523b29;
+			color: darken(#FF0300, 5%);
 			@media @mob-w {
 				width: 100%;
 				text-align: left;
@@ -376,6 +383,7 @@
 		}
 		&__ammount {
 			padding-top: 11px;
+			color: darken(#FF0300, 5%);
 			@media @mob-w {
 				width: 100%;
 				text-align: left;
@@ -400,8 +408,8 @@
 			cursor: pointer;
 			transition: all .3s ease;
 			&:hover {
-				color: #c4393d;
-				border-bottom-color: #c4393d;
+				color: #523b29;
+				border-bottom-color: #523b29;
 				text-decoration: none;
 			}
 			span {
@@ -416,13 +424,29 @@
 			}
 		}
 	}
-}
+	.mobile-label {
+		margin-right: 20px;
+		font-size: 16px;
+		min-width: 20%;
+		display: inline-block;
+	  height: auto !important;
+	  line-height: 1 !important;
+	  border: none !important;
+	}
 
-.mobile-label {
-	margin-right: 20px;
-	font-size: 16px;
-	min-width: 20%;
-	display: inline-block;
+	.counter-mobile-value {
+		@media @mob-w {
+			margin-left: 30px;
+	    height: auto !important;
+	    line-height: 1 !important;
+	    border: none !important;
+		}
+		@media @tablet-w {
+			margin-left: 0;
+			height: 40px !important;
+			line-height: 40px !important;
+		}
+	}
 }
 
 .order-form-footer {
@@ -470,7 +494,7 @@
 			width: 50%;
 		}
 		&__name {
-			color: @gray;
+			color: #000000;
 			font-size: 18px;
 			font-family: 'TI';
 			opacity: .7;
@@ -481,9 +505,17 @@
 			font-family: 'Helvetica';
 			text-align: right;
 			&.full {
-				font-size: 24px;
+				font-size: 16px;
 			}
 		}
+	}
+}
+
+.order-day,
+.order-time {
+	label {
+		margin-bottom: 10px;
+		display: block;
 	}
 }
 

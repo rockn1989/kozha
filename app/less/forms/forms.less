@@ -54,19 +54,20 @@
 		i {
 			padding-left: 5px;
 			&:before {
+				color: #e60300;
 				transition: color .3s ease;
 			}
 		}
 	}
 	::placeholder {
-		color: @red;f
+		color: #000000;
 		z-index: 12px;
 		transition: color .3s ease;
 	}
 	&:hover {
 		cursor: pointer;
 		i:before,::placeholder {
-			color: #c4393d;
+			color: #523b29;
 		}
 	}
 	&.open {
@@ -77,6 +78,7 @@
 		button {
 			display: inline-block;
 			opacity: 1;
+			color: #3a3a3a;
 		}
 	}
 }
@@ -144,4 +146,34 @@
 		line-height: 40px;
 		max-width: 320px;
 	}
+}
+
+
+form {
+	ul.form-list {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		@media (min-width: 768px) {
+			max-width: 50%;
+		}
+		li {
+			margin-bottom: 10px;
+			&.code {
+				img {
+					margin: 30px 0 !important;
+				}
+			}
+			span.error-message {
+				color: red;
+				font-size: 12px;
+			}
+		}
+	}
+}
+
+/*______ Profile form ______*/
+
+.signup-form {
+	margin-bottom: 100px;
 }

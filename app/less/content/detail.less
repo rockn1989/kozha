@@ -1,7 +1,6 @@
 /*______ Детальная карточки товара ______*/
 
 .detail-product-content {
-	margin-bottom: 40px !important;
 	.title-h1 {
 		margin-bottom: 25px;
 	}
@@ -16,7 +15,6 @@
 
 .detail-product-section {
 	padding: 20px 0;
-	//font-size: 0;
 	font-family: 'Helvetica';
 	border-bottom: 1px solid #dadada;
 	.section-name,
@@ -24,6 +22,11 @@
 		display: inline-block;
 		vertical-align: top;
 		font-size: 14px;
+		a {
+			&:hover {
+				text-decoration: none;
+			}
+		}
 	}
 	.section-name {
 		width: 15%;
@@ -169,11 +172,13 @@
 		opacity: 0;
 		z-index: -1;
 		transition: all .3s ease;
+		overflow-x: scroll;
 		@media @mob-w {
 			max-width: 100%;
 		}
 		@media @desk-w {
 			max-width: none;
+			overflow-x: unset;
 		}
 		table {
 			width: 100%;
@@ -200,9 +205,9 @@
 	.old-price {
 		margin-right: 15px;
 		position: relative;
-		color: @gray;
+		color: #000000;
 		font-size: 16px;
-		opacity: .5;
+		opacity: .8;
 		&:after {
 			content: '';
 			position: absolute;
@@ -211,7 +216,7 @@
 			width: 100%;
 			height: 1px;
 			display: block;
-			background-color: #c4393d;
+			background-color: #523b29;
 		}
 	}
 	.current-price {
@@ -302,11 +307,13 @@
 	.btn {
 		margin-right: 8%;
 		max-width: 240px;
+		padding: 0 25px;
+		font-size: 16px;
 	}
 }
 
 .detail-product-options {
-	margin-bottom: 50px !important;
+	margin: 40px 0 50px !important;
 	.uk-tab {
 		border: none;
 	}
@@ -328,13 +335,17 @@
 		transition: border-color .3s ease;
 	}
 	.uk-tab>li.uk-active {
-		border-bottom: 3px solid #c4393d;
+		border-bottom: 3px solid #523b29;
 	}
 	.uk-tab>li:nth-child(n+2)>a {
 		margin-left: 0;
 	}
 	.uk-switcher {
 		padding: 25px 0;
+		font-size: 16px;
+		h2, .title-h2 {
+			text-align: left;
+		}
 	}
 }
 

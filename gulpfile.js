@@ -95,6 +95,7 @@ gulp.task("serve", ["templates", "less", "svgstore"], function() {
 	gulp.watch("app/less/**/*.less", ["less"]);
 	gulp.watch("app/img/icon-svg/*.svg", ["svgstoreDev"]);
 	gulp.watch("app/img/icon-svg/*.svg", browserSync.reload);
+	gulp.watch("app/img/**/**", browserSync.reload);
 	gulp.watch("app/js/**/*.js", browserSync.reload);
 	gulp.watch("app/*.html", browserSync.reload);
 

@@ -1,15 +1,15 @@
 {% extends "layouts/default.html" %}
 {% set title="Каталог" %}
 {% set products =[
-	{name: "Куртка женская", stocks: {new:"Новинка"}, brand: "Gucci", price: "7 990р.", oldprice: ""},
-	{name: "Жилет из соболя с отделкой из свакары по бокам", stocks: {discount:"-20%"}, brand: "Avanti", price: "731 493 р.", oldprice: "965 493 р. "},
-	{name: "Норковая Шуба", brand: "Елена Фурс", price: "124 990 р.", oldprice: ""},
-	{name: "Куртка женская", brand: "Gucci", price: "7 990р.", oldprice: ""},
-	{name: "Жилет из соболя с отделкой из свакары по бокам", stocks: {discount:"-20%"}, brand: "Avanti", price: "731 493 р.", oldprice: "965 493 р. "},
-	{name: "Жилет из соболя с отделкой из свакары по бокам", stocks: {discount:"-20%"}, brand: "Avanti", price: "731 493 р.", oldprice: "965 493 р. "},
-	{name: "Жилет из соболя с отделкой из свакары по бокам", stocks: {discount:"-20%"}, brand: "Avanti", price: "731 493 р.", oldprice: "965 493 р. "},
-	{name: "Жилет из соболя с отделкой из свакары по бокам", stocks: {discount:"-20%"}, brand: "Avanti", price: "731 493 р.", oldprice: "965 493 р. "},
-	{name: "Жилет из соболя с отделкой из свакары по бокам", stocks: {discount:"-20%"}, brand: "Avanti", price: "731 493 р.", oldprice: "965 493 р. "} 
+	{name: "Куртка женская", stocks: {new:"Новинка"}, brand: "Gucci", price: "7 990руб.", oldprice: ""},
+	{name: "Жилет из соболя с отделкой из свакары по бокам", stocks: {discount:"-20%"}, brand: "Avanti", price: "731 493 руб.", oldprice: "965 493 руб. "},
+	{name: "Норковая Шуба", brand: "Елена Фурс", price: "124 990 руб.", oldprice: ""},
+	{name: "Куртка женская", brand: "Gucci", price: "7 990руб.", oldprice: ""},
+	{name: "Жилет из соболя с отделкой из свакары по бокам", stocks: {discount:"-20%"}, brand: "Avanti", price: "731 493 руб.", oldprice: "965 493 руб. "},
+	{name: "Жилет из соболя с отделкой из свакары по бокам", stocks: {discount:"-20%"}, brand: "Avanti", price: "731 493 руб.", oldprice: "965 493 руб. "},
+	{name: "Жилет из соболя с отделкой из свакары по бокам", stocks: {discount:"-20%"}, brand: "Avanti", price: "731 493 руб.", oldprice: "965 493 руб. "},
+	{name: "Жилет из соболя с отделкой из свакары по бокам", stocks: {discount:"-20%"}, brand: "Avanti", price: "731 493 руб.", oldprice: "965 493 руб. "},
+	{name: "Жилет из соболя с отделкой из свакары по бокам", stocks: {discount:"-20%"}, brand: "Avanti", price: "731 493 руб.", oldprice: "965 493 руб. "} 
 ] %}
 {% set bread = ["Главная", "Женщинам", "Дубленки"] %}
 {% set main = false %}
@@ -27,8 +27,8 @@
 								<div class="custom-select-label">Сортировать по </div>
 								<select name="" id="" class="js__custom-select" data-theme="default">
 									<option value="">популярности</option>
-									<option value="">цене(убывние)</option>
-									<option value="">цене(возрастание)</option>
+									<option value="">убыванию цены</option>
+									<option value="">возрастанию цены</option>
 								</select>
 							</div>
 						</div>
@@ -169,7 +169,7 @@
 					<div class="catalog-header">
 						<div class="title-h1 uk-visible-large">Женские дубленки</div>
 						<div class="catalog-selects uk-visible-large">
-							<div class="custom-select-wrapper">
+							<div class="custom-select-wrapper uk-hidden">
 								<div class="custom-select-label">Показывать по </div>
 								<select name="" id="" class="js__custom-select" data-theme="default">
 									<option value="">24</option>
@@ -181,8 +181,8 @@
 								<div class="custom-select-label">Сортировать по </div>
 								<select name="" id="" class="js__custom-select" data-theme="default">
 									<option value="">популярности</option>
-									<option value="">цене(убывние)</option>
-									<option value="">цене(возрастание)</option>
+									<option value="">убыванию цены</option>
+									<option value="">возрастанию цены</option>
 								</select>
 							</div>
 						</div>
@@ -239,7 +239,7 @@
 												<div class="card__product-brand"><a href="">{{product.brand}}</a></div>
 												<div class="card__offer">
 													<a href="">
-														<span class="card__offer-text">В рассрочку</span> от <span class="card__offer-value">491 р.</span>
+														<span class="card__offer-text">В рассрочку</span> от <span class="card__offer-value">491 руб.</span>
 													</a>
 												</div>
 											</div>
